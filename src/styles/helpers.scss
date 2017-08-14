@@ -1,0 +1,20 @@
+$color-black: #000;
+$color-pink: #e3008c;
+$color-white: #fff;
+
+.is-bold {
+  font-weight: bold;
+}
+.is-selected, .is-active {
+  color: $color-pink;
+}
+
+.is-flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &-end {
+    justify-content: flex-end;
+  }
+}

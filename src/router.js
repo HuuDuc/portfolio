@@ -3,6 +3,7 @@ import { Router, browserHistory, IndexRoute, Route } from 'react-router'
 
 import Landing from './components/page/Landing'
 import About from './components/page/About'
+import Project from './components/page/Project'
 import Contact from './components/page/Contact'
 
 import NotFound404 from './components/error/NotFound404'
@@ -14,7 +15,7 @@ const router = () => {
         <IndexRoute component={Landing} />
         <Route>
           <Route path="about" pathnames="about" component={About} />
-          <Route path="contact" pathnames="contact" component={Contact} />
+          <Route path="projects" pathnames="projects" component={Project} />
           <Route path="contact" pathnames="contact" component={Contact} />
         </Route>
       </Route>

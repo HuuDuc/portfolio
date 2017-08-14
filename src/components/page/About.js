@@ -1,10 +1,17 @@
 import React, { Component } from 'react'
 
+import Landing from './Landing'
+
 class About extends Component {
 
   render() {
+
+    console.log('this.props.', this.props);
+
     return (
-      <div>About</div>
+      <Landing>
+        <div>About</div>
+      </Landing>
     )
   }
 

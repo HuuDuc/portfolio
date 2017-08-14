@@ -1,0 +1,101 @@
+@import "~bulma";
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,700');
+@import "helpers";
+
+html, body {
+  height: 100%;
+  min-height: 100%;
+}
+
+body {
+  color: $color-black;
+  font-family: 'Roboto', sans-serif;
+  letter-spacing: 1.5px;
+  text-rendering: geometricPrecision;
+}
+
+a {
+  color: $color-black;
+  position: relative;
+  transition: color .4s;
+  &:hover {
+    color: $color-pink;
+  }
+}
+
+.loading-container {
+  background-color: $color-white;
+  display: none;
+  height: 100%;
+  left: 0;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  transition: all .4s;
+  width: 100%;
+  z-index: 1000;
+
+  &.show {
+    display: block;
+    opacity: 1;
+  }
+}
+
+.main-container {
+  position: relative;
+}
+
+.landing-page {
+  position: relative;
+
+  .hero-head,
+  .hero-foot,
+  .hero-body {
+    z-index: 10;
+  }
+  .hero-head {
+    padding: 50px;
+    padding-bottom: 0;
+  }
+  .hero-foot {
+    padding: 50px;
+    padding-top: 0;
+  }
+  .title.is-1 {
+    margin-bottom: 0.3em;
+  }
+  .title.is-6 {
+    line-height: 1.5em;
+  }
+  .socials {
+    p {
+      margin-bottom: 15px;
+      line-height: 15px;
+    }
+    a {
+      margin-left: 20px;
+      line-height: 20px;
+    }
+  }
+
+  .particles-container {
+    height: 100%;
+    left: 0;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 0;
+  }
+}
+
+#contact {
+  background-color: $color-pink;
+  height: 100%;
+  left: 0;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+}
