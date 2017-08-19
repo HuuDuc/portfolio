@@ -15,7 +15,7 @@ const router = () => {
         <IndexRoute component={Landing} />
         <Route>
           <Route path="about" pathnames="about" component={About} />
-          <Route path="projects" pathnames="projects" component={Project} />
+          {/* <Route path="projects" pathnames="projects" component={Project} /> */}
           <Route path="contact" pathnames="contact" component={Contact} />
         </Route>
       </Route>

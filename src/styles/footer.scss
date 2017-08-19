@@ -1,0 +1,44 @@
+.footer {
+  background-color: $color-black;
+  padding: inherit !important;
+  height: 45px;
+  .nav-left {
+    overflow: hidden;
+  }
+
+  // nav-item is-uppercase is-size-7 is-active
+  a {
+    color: $color-white;
+    position: relative;
+    border-right: 1px solid $color-grey-40;
+    display: block;
+    font-size: 1em;
+    letter-spacing: 2px;
+    line-height: 45px;
+    padding: 0 20px;
+
+    &:before {
+      @extend .before-after;
+      background-color: $color-pink;
+      top: inherit;
+      bottom: -45px;
+      z-index: -1;
+      transition: bottom .15s;
+    }
+
+    &:hover {
+      // color: $color-white;
+      // background-color: $color-pink;
+      &:before {
+        bottom: 0;
+      }
+    }
+    span {
+      line-height: 45px;
+      color: $color-white;
+    }
+  }
+  &.fixed {
+    position: fixed;
+  }
+}

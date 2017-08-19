@@ -1,14 +1,18 @@
 $color-black: #000;
+$color-grey-40: lighten($color-black, 40%);
+$color-grey-60: lighten($color-black, 60%);
 $color-pink: #e3008c;
 $color-white: #fff;
 
+.is-normal {
+  font-weight: normal;
+}
 .is-bold {
   font-weight: bold;
 }
 .is-selected, .is-active {
   color: $color-pink;
 }
-
 .is-flex-center {
   display: flex;
   align-items: center;
@@ -17,4 +21,16 @@ $color-white: #fff;
   &-end {
     justify-content: flex-end;
   }
+}
+.is-pointer {
+  cursor: pointer;
+}
+
+.before-after {
+  content: "";
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
 }

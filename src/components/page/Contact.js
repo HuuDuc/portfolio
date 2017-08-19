@@ -1,21 +1,25 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
-import Landing from './Landing'
-import { Link } from 'react-router'
+import classnames from 'classnames'
 
 class Contact extends Component {
 
   render() {
+
+    // const { router } = this.context
+
     return (
-      <Landing>
-        <section
-          id="contact"
-          className="hero is-fullheight is-unselectable"
-        >
-          <Link to="/">close</Link>
-          Contact
-        </section>
-      </Landing>
+      <section
+        id="contact"
+        className="hero is-fullheight is-unselectable"
+        className={classnames({
+          'hero': true,
+          'is-fullheight': true,
+          'is-unselectable': true,
+        })}
+      >
+        contact
+      </section>
     )
   }
 

@@ -1,15 +1,28 @@
 import React, { Component } from 'react'
-import { Link } from 'react-router'
+import PropTypes from 'prop-types'
 import Icon from 'react-fa'
 import Particles from 'react-particles-js'
 import classnames from 'classnames'
 
+import Footer from './partial/Footer'
+
 class Landing extends Component {
 
   render() {
+
+    const { router } = this.context
+
     return (
       <div>
-        <section className="hero is-fullheight landing-page is-unselectable">
+
+        <section
+          className={classnames({
+            'hero': true,
+            'is-fullheight': true,
+            'landing-page': true,
+            'is-unselectable': true,
+          })}
+        >
 
           <div className="particles-container">
             <Particles
@@ -17,7 +30,7 @@ class Landing extends Component {
                 {
                   particles: {
                     number: {
-                      value: 30,
+                      value: 35,
                       density: {
                         enable: true,
                         value_area: 800
@@ -26,16 +39,19 @@ class Landing extends Component {
                     shape: {
                       type: 'circle',
                       stroke: {
-                        width: 1,
-                        color: '#e3008c'
+                        width: 0,
+                        color: '#ffffff'
                       },
                     },
                     line_linked: {
                       enable: true,
-                      distance: 210,
+                      distance: 120,
                       color: '#e3008c',
-                      opacity: 0.2,
+                      opacity: 0.4,
                       width: 1
+                    },
+                    size: {
+                      random: true
                     }
                   }
                 }
@@ -47,9 +63,9 @@ class Landing extends Component {
 
             <div className="columns">
 
-              <div className="column">
+              <div className="column is-6">
                 <div className="columns">
-                  <div className="column is-one-quarter">
+                  <div className="column is-3">
                     <p className="is-uppercase is-bold is-size-7">
                       {'from paris'}
                       <br/>
@@ -60,7 +76,7 @@ class Landing extends Component {
                       {'®huuduc.'}
                     </p>
                   </div>
-                  <div className="column is-one-quarter">
+                  <div className="column is-3">
                     <p className="is-uppercase is-bold is-size-7">
                       {'front end + full stack php developer /'}
                       <br/>
@@ -74,84 +90,29 @@ class Landing extends Component {
                 </div>
               </div>
 
-              <div className="column socials has-text-right">
-                {/*
-                  <p className="is-bold">
-                    <span className="is-active">EN</span>
-                    <span>{' / '}</span>
-                    <span>中文</span>
-                  </p>
-                */}
-                <div>
-                  <a href="http://codepen.io/huuduc/" className=" is-size-5 is-bold">
-                    <Icon name="codepen" />
-                  </a>
-                  <a href="https://twitter.com/huuducweb" className=" is-size-5 is-bold">
-                    <Icon name="linkedin" />
-                  </a>
-                  <a href="https://tw.linkedin.com/in/stephanehuuducnguyen" className=" is-size-5 is-bold">
-                    <Icon name="twitter" />
-                  </a>
-                  <a href="https://github.com/HuuDuc" className=" is-size-5 is-bold">
-                    <Icon name="github" />
-                  </a>
-                </div>
-              </div>
-
             </div>
           </div>
 
           <div className="hero-body">
             <div className="container has-text-centered">
-              <h1 className="title is-1 is-uppercase">
-                Stephane Nguyen
-              </h1>
-              <h6 className="is-uppercase title is-6">you live once so enjoy and<br/> keep learning</h6>
+              <div className="columns">
+                <div className="column is-half is-offset-one-quarter">
+                  <h1 className="title is-1 is-uppercase is-normal">
+                    Stephane <span className="is-bold">Nguyen</span>
+                  </h1>
+                  <h6 className="is-uppercase title is-6">you live once so enjoy and<br/> keep learning</h6>
+                </div>
+              </div>
             </div>
           </div>
 
-          <div className="hero-foot">
-            <div className="columns">
-              <div className="column is-uppercase has-text-centered">
-                <Link
-                  to="/about"
-                  className="is-bold is-size-7"
-                  classNames={
-                    classnames({
-                      'is-bold': true,
-                      'is-size-7': true,
-                      // 'is-active': this.props.route.pathnames === 'about' || false
-                    })
-                  }
-                >
-                  about
-                </Link>
-              </div>
-              <div className="column is-uppercase has-text-centered">
-                <Link to="/projects" className="is-bold is-size-7">projects</Link>
-              </div>
-              <div className="column is-uppercase has-text-centered">
-                <Link to="/blog" className="is-bold is-size-7">blog</Link>
-              </div>
-              <div className="column is-uppercase has-text-centered">
-                <Link
-                  to="/contact"
-                  className={
-                    classnames({
-                      'is-bold': true,
-                      'is-size-7': true,
-                    })
-                  }
-                >
-                  contact
-                </Link>
-              </div>
-            </div>
-
-          </div>
+          <Footer
+            router={router}
+            pathname={this.props.route.pathnames}
+          />
 
         </section>
-        {this.props.children}
+
       </div>
     )
   }
@@ -159,6 +120,8 @@ class Landing extends Component {
 }
 
 Landing.propTypes = {}
-Landing.contextTypes = {}
+Landing.contextTypes = {
+  router: PropTypes.object,
+};
 
 export default Landing
