@@ -1,0 +1,18 @@
+.logo {
+  position: fixed;
+  left: 50px;
+  top: 35px;
+  z-index: 2000;
+
+  transition: color .2s;
+
+  @include mobile {
+    top: 22px;
+    left: 20px;
+
+  }
+
+  &.show {
+    color: $color-white;
+  }
+}

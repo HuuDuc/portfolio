@@ -60,3 +60,12 @@ $color-white: #fff;
   top: 0;
   width: 100%;
 }
+
+.no-letter-spacing {
+  color: $color-grey-60;
+  font-weight: lighter;
+  letter-spacing: -2px;
+}
+.is-separation {
+  margin: 20px 0;
+}

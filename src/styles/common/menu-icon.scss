@@ -1,13 +1,23 @@
 $menu-icon-bar: 2px;
 $menu-icon-size: 40px;
-$menu-icon-size-space: 12px;
+$menu-icon-size-space: 11px;
 
 .menu-icon {
 
   cursor: pointer;
   height: $menu-icon-size;
-  position: relative;
+  position: fixed;
   width: $menu-icon-size;
+
+  right: 50px;
+  top: 35px;
+  z-index: 2000;
+
+  @include mobile {
+      top: 20px;
+      right: 20px;
+      font-size: 10% !important;
+  }
 
   > div {
     background-color: $color-black;
@@ -60,12 +70,12 @@ $menu-icon-size-space: 12px;
 
       &:before {
         transform: rotate(-45deg);
-        background-color: $color-black;
+        background-color: $color-white;
         opacity: 1;
       }
       &:after {
         transform: rotate(45deg);
-        background-color: $color-black;
+        background-color: $color-white;
         opacity: 1;
       }
     }

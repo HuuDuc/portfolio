@@ -1,0 +1,64 @@
+.landing {
+  .first {
+    position: relative;
+  }
+  .particles-content {
+    border-radius: 200px;
+    overflow: hidden;
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+
+    z-index: 0;
+    canvas {
+      box-shadow: 0 0 5px #ccc;
+      border-radius: 250px;
+      background-color: #fdfdfd;
+      height: 500px !important;
+      width: 500px !important;
+
+      position: absolute;
+
+      left: calc(50% - 250px);
+      top: calc(50% - 250px);
+
+      @include mobile {
+        display: none;
+      }
+    }
+  }
+  .social {
+    p {
+      margin-bottom: 15px;
+    }
+  }
+  .middle-content {
+    position: relative;
+    p {
+      margin-bottom: 10px;
+      &:first-child {
+        width: 101px;
+      }
+      &:nth-child(2) {
+        width: 230px;
+      }
+      &:last-child {
+        width: 152px;
+      }
+
+      @include mobile {
+        &:first-child {
+          width: 70px;
+        }
+        &:nth-child(2) {
+          width: 160px;
+        }
+        &:last-child {
+          width: 105px;
+        }
+      }
+    }
+  }
+}
