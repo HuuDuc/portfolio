@@ -13,21 +13,22 @@ $menu-icon-size-space: 12px;
     background-color: $color-black;
     position: absolute;
     height: $menu-icon-bar;
-    left: 10px;
-    width: calc(100% - 20px);
+    left: 7.5px;
+    width: calc(100% - 15px);
     top: calc(50% - 1.5px);
     opacity: 1;
-    transition: background-color .2s, opacity .4s;
+    transition: background-color .4s, opacity .4s;
 
     &:before, &:after {
-      background-color: $color-black;
+      background-color: $color-pink;
       content: "";
       height: $menu-icon-bar;
       left: 0;
       top: 0;
       position: absolute;
       width: 100%;
-      transition: transform .4s;
+      transition: transform .4s, opacity .4s, background-color 1s;
+      opacity: 0;
     }
 
   }
@@ -36,10 +37,10 @@ $menu-icon-size-space: 12px;
     background-color: $color-black;
     content: "";
     height: $menu-icon-bar;
-    left: 10px;
+    left: 7.5px;
     position: absolute;
-    width: calc(100% - 20px);
-    transition: opacity .2s;
+    width: calc(100% - 15px);
+    transition: opacity .2s, background-color .4s;
   }
   &:before {
     top: $menu-icon-size-space;
@@ -59,9 +60,13 @@ $menu-icon-size-space: 12px;
 
       &:before {
         transform: rotate(-45deg);
+        background-color: $color-black;
+        opacity: 1;
       }
       &:after {
         transform: rotate(45deg);
+        background-color: $color-black;
+        opacity: 1;
       }
     }
   }
