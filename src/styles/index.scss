@@ -1,8 +1,8 @@
 @import "~bulma";
 @import "helpers";
-@import url('https://fonts.googleapis.com/css?family=Roboto:300,700');
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,500,700');
 @import url(https://fonts.googleapis.com/earlyaccess/notosanstc.css);
-@import "footer";
+@import "menu";
 @import "about";
 
 html, body {
@@ -14,7 +14,7 @@ html, body {
 body {
   color: $color-black;
   font-family: 'Roboto', 'Noto Sans TC', '微軟正黑體', sans-serif;
-  letter-spacing: 1.5px;
+  letter-spacing: 2px;
 
   &.zh {
     letter-spacing: 2px;
@@ -32,6 +32,9 @@ a {
 
 p.text {
   line-height: 28px;
+  &.zh {
+    line-height: 30px;
+  }
 }
 
 .title {
@@ -39,7 +42,7 @@ p.text {
 }
 
 .is-uppercase {
-  letter-spacing: 1.8px;
+  letter-spacing: 2.2px;
 }
 
 .is-pink {
@@ -76,6 +79,7 @@ section.hero {
     color: $color-pink;
     margin-bottom: 0.3em;
     transition: all .4s;
+    letter-spacing: 6px;
     &:hover {
       color: $color-black;
     }
@@ -124,5 +128,27 @@ section.hero {
   &.show {
     left: 0;
     opacity: 1;
+  }
+}
+
+.loading {
+  background: $color-white;
+  position: fixed;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+
+  opacity: 0;
+  top: -2500px;
+
+  transition: opacity 1s, top 2s;
+
+  &.show {
+    opacity: 1;
+    top: 0;
+  }
+
+  &.hide {
+    display: none;
   }
 }

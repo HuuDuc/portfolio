@@ -3,10 +3,17 @@ import PropTypes from 'prop-types'
 import Icon from 'react-fa'
 import Particles from 'react-particles-js'
 import classnames from 'classnames'
+import store from 'store'
 
-import Footer from './partial/Footer'
+import Nav from './partial/Nav'
 
 class Landing extends Component {
+
+  componentWillMount() {
+    if (!store.get('locale')) {
+      store.set('locale', 'EN')
+    }
+  }
 
   render() {
 
@@ -106,7 +113,7 @@ class Landing extends Component {
             </div>
           </div>
 
-          <Footer
+          <Nav
             router={router}
             pathname={this.props.route.pathnames}
           />

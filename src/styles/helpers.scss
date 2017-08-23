@@ -1,6 +1,7 @@
 $color-black: #000;
 $color-grey-40: lighten($color-black, 40%);
 $color-grey-60: lighten($color-black, 60%);
+$color-grey-80: lighten($color-black, 80%);
 $color-pink: #e3008c;
 $color-white: #fff;
 
@@ -24,6 +25,31 @@ $color-white: #fff;
 }
 .is-pointer {
   cursor: pointer;
+}
+.is-lighter {
+  font-weight: lighter;
+}
+
+.is-title-section {
+  @extend .is-bold;
+  @extend .is-uppercase;
+  @extend .has-text-centered;
+  @extend .has-text-centered;
+  font-size: 3.5em;
+  letter-spacing: 20px !important;
+
+  span {
+    font-size: 45%;
+    display: block;
+    font-weight: lighter;
+    letter-spacing: 25px !important;
+  }
+}
+
+.separation {
+  border-top: 1px solid $color-grey-80;
+  height: 1px;
+  width: 100%;
 }
 
 .before-after {

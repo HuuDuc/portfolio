@@ -27,7 +27,7 @@ class Loading extends Component {
   }
 
   hide = () => {
-    setTimeout(() => this.setState({ hide: true }), 500)
+    setTimeout(() => this.setState({ hide: true }), 1000)
   }
 
   render() {
@@ -49,7 +49,8 @@ class Loading extends Component {
       >
         <div className="hero-body">
           <div className="container has-text-centered">
-            <span className="is-uppercase is-bold">loading</span>
+            <span className="is-uppercase is-bold is-size-3">loading</span><br/>
+            <span className="is-uppercase is-normal is-size-4">裝載</span>
           </div>
         </div>
       </div>
