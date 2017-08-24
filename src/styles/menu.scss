@@ -1,43 +1,47 @@
 .menu {
   background-color: $color-black;
-  padding: inherit !important;
   height: 45px;
+  padding: inherit;
+
   .nav-left {
     overflow: hidden;
   }
 
   // nav-item is-uppercase is-size-7 is-active
   a {
-    color: $color-white;
-    position: relative;
     border-right: 1px solid $color-grey-40;
+    color: $color-white;
     display: block;
     font-size: 1em;
     letter-spacing: 2px;
     line-height: 45px;
     padding: 0 20px;
+    position: relative;
 
-    &:before {
+    &::before {
       @extend .before-after;
       background-color: $color-pink;
-      top: inherit;
       bottom: -45px;
-      z-index: -1;
+      top: inherit;
       transition: bottom .15s;
+      z-index: -1;
     }
 
     &:hover {
       // color: $color-white;
       // background-color: $color-pink;
-      &:before {
+
+      &::before {
         bottom: 0;
       }
     }
+
     span {
-      line-height: 45px;
       color: $color-white;
+      line-height: 45px;
     }
   }
+
   &.fixed {
     position: fixed;
   }

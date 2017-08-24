@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-// import PropTypes from 'prop-types'
+import PropTypes from 'prop-types'
 import classnames from 'classnames'
 
 import Icon from 'react-fa'
@@ -8,11 +8,13 @@ class Menu extends Component {
 
   render() {
     const { show } = this.props
+    const { router } = this.context
 
     document
       .getElementsByTagName('body')[0]
       .style
       .overflowY = show ? 'hidden' : 'initial'
+
 
     return (
       <div className={classnames({
@@ -28,7 +30,10 @@ class Menu extends Component {
                 >
                   <ul>
                     <li className="is-uppercase">
-                      <a className="is-size-4 is-size-5-mobile">
+                      <a
+                        onClick={() => router.push('/about')}
+                        className="is-size-4 is-size-5-mobile"
+                      >
                         about
                       </a>
                     </li>
@@ -94,5 +99,8 @@ class Menu extends Component {
 
 Menu.propTypes = {
 }
+Menu.contextTypes = {
+  router: PropTypes.object,
+};
 
 export default Menu

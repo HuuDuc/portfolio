@@ -16,7 +16,7 @@ class Loading extends Component {
   componentWillReceiveProps(nextProps) {
     const { show } = nextProps
     if (!show) {
-      setTimeout(() => this.setState({ show }), 1000)
+      setTimeout(() => this.setState({ show }), 500)
     }
     if (show) {
       this.setState({
@@ -27,7 +27,7 @@ class Loading extends Component {
   }
 
   hide = () => {
-    setTimeout(() => this.setState({ hide: true }), 1000)
+    this.setState({ hide: true })
   }
 
   render() {
@@ -43,14 +43,12 @@ class Loading extends Component {
           'hero': true,
           'is-fullheight': true,
           'loading': true,
-          show,
           hide
         })}
       >
         <div className="hero-body">
           <div className="container has-text-centered">
-            <span className="is-uppercase is-bold is-size-3">loading</span><br/>
-            <span className="is-uppercase is-normal is-size-4">裝載</span>
+            <span className="is-uppercase is-normal is-size-3">loading</span><br/>
           </div>
         </div>
       </div>
@@ -60,6 +58,7 @@ class Loading extends Component {
 }
 
 Loading.propTypes = {
+  show: PropTypes.bool
 }
 
 export default Loading

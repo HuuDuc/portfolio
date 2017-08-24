@@ -1,11 +1,15 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
-import Icon from 'react-fa'
-import classnames from 'classnames'
+// import Icon from 'react-fa'
+// import classnames from 'classnames'
 
-import Nav from './partial/Nav'
-import Loading from '../Loading'
-import Particles from 'react-particles-js'
+// import Nav from './partial/Nav'
+
+// import Particles from 'react-particles-js'
+
+import Loading from '@/Loading'
+import ScrollIcon from '@/common/ScrollIcon'
+import Footer from '@/partial/Footer'
 
 class About extends Component {
 
@@ -105,13 +109,7 @@ class About extends Component {
   }
 
   componentDidMount() {
-    document.getElementsByTagName('body')[0].style.overflowY = 'auto'
-
     this.setState({ loading: false })
-  }
-
-  componentWillUnmount() {
-    document.getElementsByTagName('body')[0].style.overflowY = 'hidden'
   }
 
   onChangeNumber = (selected_number) => {
@@ -139,203 +137,68 @@ class About extends Component {
 
   render() {
 
-    const { router } = this.context
-    const {
-      biographies,
-      experiences,
-      numbers,
-      selected_number,
-      loading,
-      description_number_show
-    } = this.state
+    // const { router } = this.context
+    // const {
+    //   biographies,
+    //   experiences,
+    //   numbers,
+    //   selected_number,
+    //   loading,
+    //   description_number_show
+    // } = this.state
+
+    const { loading, biographies } = this.state
 
     return (
       <div id="about">
 
-        <section
-          className={classnames({
-            'hero': true,
-            'is-fullheight': true,
-            'is-unselectable': true,
-          })}
-        >
-
-          <div className="particles-container">
-            <Particles
-              params={
-                {
-                  particles: {
-                    number: {
-                      value: 50,
-                      density: {
-                        enable: true,
-                        value_area: 800
-                      }
-                    },
-                    shape: {
-                      type: 'circle',
-                      stroke: {
-                        width: 0,
-                        color: '#ffffff'
-                      },
-                    },
-                    line_linked: {
-                      enable: true,
-                      distance: 120,
-                      color: '#ffffff',
-                      opacity: 0.8,
-                      width: 1
-                    },
-                    size: {
-                      random: true
-                    }
-                  }
-                }
-              }
-              />
-          </div>
-
-          <div className="hero-head">
-            <span
-              onClick={() => this.context.router.push('/')}
-              className="is-uppercase is-lighter"
-            >
-              {String.fromCharCode(8592)} home
-            </span>
-          </div>
-
+        <section className="hero is-fullheight">
           <div className="hero-body">
-            <h1 className="is-title-section">
-              about me
-              <span>關於我</span>
-            </h1>
+            <div className="container">
+              <h3 className="has-text-centered title is-3 is-uppercase">
+                about
+              </h3>
+              <h5 className="has-text-centered subtitle is-5">
+                關於我
+              </h5>
+            </div>
           </div>
 
-          <div className="hero-foot has-text-centered">
-            <span
-              className="is-uppercase is-bold"
+          <div className="hero-foot">
+            <div
+              className="container is-pos-relative"
+              style={{ height: '50px', marginBottom: '40px' }}
             >
-              {String.fromCharCode(8595)}
-            </span>
-          </div>
-
-        </section>
-        <section>
-
-          <div className="container is-fluid">
-
-            <div className="biography">
-
-              {
-                biographies.map((biography, i) => {
-                  return ([
-                    <div
-                      className="columns"
-                      key={`biography-${i}`}
-                    >
-                      <div className="column is-3">
-                        <p className="is-bold is-uppercase is-size-3">
-                          {biography.section}<br/>
-                          <span className="is-size-5 is-normal">{biography.section_zh}</span>
-                        </p>
-                      </div>
-                      <div className="column is-7">
-                        <p
-                          className="text"
-                          dangerouslySetInnerHTML={{ __html: biography.description }}
-                        />
-                        <p
-                          className="text zh"
-                          dangerouslySetInnerHTML={{ __html: biography.description_zh }}
-                        />
-                      </div>
-                    </div>,
-                    <div className="separation" />
-                  ])
-                })
-              }
-
-            </div>
-
-            <div className="numbers">
-              <div className="columns">
-
-                {
-                  numbers.map((nb) => {
-                    return(
-                      <div
-                        key={`number-${nb.key}`}
-                        className={classnames({
-                          column: true,
-                          'has-text-centered': true,
-                          'is-active': selected_number === nb.key
-                        })}
-                        onClick={() => this.onChangeNumber(nb.key)}
-                      >
-                        <p className="is-uppercase is-bold">
-                          {nb.label}
-                        </p>
-                        <p>{nb.digit}</p>
-                      </div>
-                    )
-                  })
-                }
-              </div>
-            </div>
-
-          </div>
-
-          <div className="description-nb">
-            <div className="container has-text-centered is-size-4 is-uppercase">
-              <p
-                className={classnames({ show: description_number_show })}
-                dangerouslySetInnerHTML={{ __html: this.renderDescriptionNumber() }}
-              />
-            </div>
-          </div>
-
-          <div className="experiences">
-            <div className="container is-fluid">
-              <div className="columns">
-                <div className="column is-2">
-                  <p className="is-bold is-uppercase is-size-3">
-                    experiences<br/>
-                    <span className="is-size-5 is-normal">經驗</span>
-                  </p>
-                </div>
-                <div className="column is-7 list">
-
-                  {
-                    experiences.map((experience, i)=> {
-                      return (
-                        <div
-                          key={`experience-${i}`}
-                          className="columns"
-                        >
-                          {
-                            i % 2 !== 0 &&
-                            <div className="column" />
-                          }
-                          <div className="column">
-                            <p className="is-size-6">{experience.period}</p>
-                            <p className="is-size-4 is-bold is-uppercase">{experience.company}</p>
-                            <p className="is-size-5 is-lighter">{experience.position}</p>
-                          </div>
-                          {
-                            i % 2 === 0 &&
-                            <div className="column" />
-                          }
-                        </div>
-                      )
-                    })
-                  }
-
-                </div>
-              </div>
+              <ScrollIcon />
             </div>
           </div>
 
         </section>
+
+        <div className="container">
+          <div className="columns">
+            {
+              biographies.map((biography, i) => {
+                return (
+                  <div
+                    key={`biography${i}`}
+                    className="column"
+                  >
+                    <section className="section">
+                      <h5 className="title is-5 is-bold is-uppercase">{biography.section}</h5>
+                      <h6 className="title is-6 is-normal">{biography.section_zh}</h6>
+                      <div className="content">
+                        <p dangerouslySetInnerHTML={{ __html: biography.description }} />
+                      </div>
+                    </section>
+                  </div>
+                );
+              })
+            }
+          </div>
+        </div>
+
+        <Footer />
 
         <Loading show={loading} />
 

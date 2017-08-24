@@ -4,11 +4,13 @@
 @import 'extends';
 @import 'animation';
 
+@import 'common/loading';
 @import 'common/logo';
 @import 'common/menu-icon';
 @import 'common/menu';
 @import 'common/scroll-icon';
 
+@import 'page/error';
 @import 'page/landing';
 
 

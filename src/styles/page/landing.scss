@@ -10,10 +10,10 @@
       background: linear-gradient(300deg, $color-black, $color-pink);
       background-size: 400% 400%;
 
-      height: 400px;
+      height: 235px;
       left: calc(50% - 200px);
       position: absolute;
-      top: calc(50% - 200px);
+      top: calc(50% - 117.5px);
       width: 400px;
       z-index: 0;
 
@@ -25,11 +25,11 @@
 
       @include mobile {
         background-size: 300% 300%;
-        height: 100px;
+        height: 58px;
         left: inherit;
         position: absolute;
         right: 20px;
-        top: calc(50% - 50px);
+        top: calc(50% - 29.5px);
         width: 100px;
       }
     }
@@ -54,15 +54,15 @@
 
         @include mobile {
           &:first-child {
-            width: 70px;
+            width: 54px;
           }
 
           &:nth-child(2) {
-            width: 165px;
+            width: 128px;
           }
 
           &:last-child {
-            width: 108px;
+            width: 85px;
           }
         }
       }
@@ -72,34 +72,10 @@
 
       p {
         margin-bottom: 15px;
+        &:last-child {
+          margin-bottom: 0;
+        }
       }
     }
   }
-  // .particles-content {
-  //   border-radius: 200px;
-  //   overflow: hidden;
-  //   position: absolute;
-  //   height: 100%;
-  //   width: 100%;
-  //   top: 0;
-  //   left: 0;
-  //
-  //   z-index: 0;
-  //   canvas {
-  //     box-shadow: 0 0 5px #ccc;
-  //     border-radius: 250px;
-  //     background-color: #fdfdfd;
-  //     height: 500px !important;
-  //     width: 500px !important;
-  //
-  //     position: absolute;
-  //
-  //     left: calc(50% - 250px);
-  //     top: calc(50% - 250px);
-  //
-  //     @include mobile {
-  //       display: none;
-  //     }
-  //   }
-  // }
 }

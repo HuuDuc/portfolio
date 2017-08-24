@@ -5,12 +5,25 @@ import Icon from 'react-fa'
 // import classnames from 'classnames'
 
 import ScrollIcon from '@/common/ScrollIcon'
+import Loading from '@/Loading'
 
 class Landing extends Component {
+
+  constructor(props) {
+    super(props)
+    this.state = {
+      loading: true
+    }
+  }
+
+  componentDidMount() {
+    this.setState({ loading: false })
+  }
 
   render() {
 
     // const { router } = this.context
+    const { loading } = this.state
 
     return (
       <div className="landing">
@@ -30,9 +43,9 @@ class Landing extends Component {
                 <div className="column middle-content">
 
                     <div>
-                      <p className="is-uppercase is-size-1 is-size-3-mobile is-underline">您好</p>
-                      <p className="is-uppercase is-size-1 is-size-3-mobile is-underline">bonjour</p>
-                      <p className="is-uppercase is-size-1 is-size-3-mobile is-underline">hello</p>
+                      <p className="is-uppercase is-size-1 is-size-4-mobile is-underline">您好</p>
+                      <p className="is-uppercase is-size-1 is-size-4-mobile is-underline">bonjour</p>
+                      <p className="is-uppercase is-size-1 is-size-4-mobile is-underline">hello</p>
                     </div>
 
                 </div>
@@ -62,6 +75,8 @@ class Landing extends Component {
           <div className="hero-body">landing page</div>
 
         </section>
+
+        <Loading show={loading} />
 
       </div>
     )

@@ -1,6 +1,7 @@
 $menu-hide-scale: .85;
 $menu-show-scale: 1;
 $menu-animation-delay: .1s;
+$menu-animation-duration: .6s;
 
 .menu-container {
   // -ms-transform: scale($menu-hide-scale);
@@ -53,7 +54,7 @@ $menu-animation-delay: .1s;
 
           li {
             &:nth-child(#{$i}) {
-              animation: AnimationFromLeft .8s ease 1;
+              animation: AnimationFromLeft $menu-animation-duration ease 1;
               animation-delay: $i * $menu-animation-delay;
               animation-fill-mode: forwards;
               @include animationfromleft;
@@ -66,7 +67,7 @@ $menu-animation-delay: .1s;
       }
 
       p.is-separation {
-        animation: AnimationFromRight .8s ease 1;
+        animation: AnimationFromRight $menu-animation-duration ease 1;
         animation-delay: 5 * $menu-animation-delay;
         animation-fill-mode: forwards;
         @include animationfromright;
@@ -75,7 +76,7 @@ $menu-animation-delay: .1s;
       .socials .column {
         @for $i from 1 to 4 {
           &:nth-child(#{$i}) {
-            animation: AnimationFromRight .8s ease 1;
+            animation: AnimationFromRight $menu-animation-duration ease 1;
             animation-delay: (5 * $menu-animation-delay) + ($i * $menu-animation-delay);
             animation-fill-mode: forwards;
             @include animationfromright;
