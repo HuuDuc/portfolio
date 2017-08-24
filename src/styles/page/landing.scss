@@ -16,7 +16,7 @@
 
       &.show {
         animation: AnimationFromBottom $menu-animation-duration ease 1;
-        animation-delay: 1.5s;
+        animation-delay: 1.2s;
         animation-fill-mode: forwards;
         @include animationfrombottom;
       }
@@ -31,7 +31,7 @@
 
       margin-top: -20px;
       opacity: 0;
-      
+
       p {
         margin-bottom: 20px;
         &:nth-child(3) {
@@ -44,7 +44,7 @@
 
       &.show {
         animation: AnimationFromBottom $menu-animation-duration ease 1;
-        animation-delay: 1.5s;
+        animation-delay: 1.2s;
         animation-fill-mode: forwards;
         @include animationfrombottom;
       }
@@ -81,7 +81,7 @@
 
       &.show {
         animation: InitialAnimation 4s ease infinite, AnimationFromTop $menu-animation-duration ease 1;
-        animation-delay: 1.5s;
+        animation-delay: 1.2s;
         animation-fill-mode: forwards;
         @include animationfromtop;
       }
