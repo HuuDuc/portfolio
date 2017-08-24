@@ -1,60 +1,31 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import Icon from 'react-fa'
-import Particles from 'react-particles-js'
-import classnames from 'classnames'
+// import Particles from 'react-particles-js'
+// import classnames from 'classnames'
+
+import ScrollIcon from '@/common/ScrollIcon'
 
 class Landing extends Component {
 
   render() {
 
-    const { router } = this.context
+    // const { router } = this.context
 
     return (
       <div className="landing">
 
         <section className="first hero is-fullheight">
 
-          <div className="particles-content">
-            <Particles
-              params={
-                {
-                  particles: {
-                    number: {
-                      value: 25,
-                      density: {
-                        enable: true,
-                        value_area: 500
-                      }
-                    },
-                    shape: {
-                      type: 'circle',
-                      stroke: {
-                        width: 1,
-                        color: '#e3008c'
-                      },
-                    },
-                    line_linked: {
-                      enable: true,
-                      distance: 500,
-                      color: '#e3008c',
-                      opacity: 0.8,
-                      width: 1
-                    },
-                    size: {
-                      random: true
-                    }
-                  }
-                }
-              }
-              />
-          </div>`
+          <div className="initial">
+            <img src={require('+/initial.png')} alt="Stephane Nguyen"/>
+          </div>
 
           <div className="hero-body">
             <div className="container is-fluid">
               <div className="columns">
                 <div className="column is-hidden-mobile is-1">
-                  <img src={require('+/frontenddeveloper.png')}/>
+                  <img src={require('+/frontenddeveloper.png')} alt="frontend developer"/>
                 </div>
                 <div className="column middle-content">
 
@@ -73,6 +44,15 @@ class Landing extends Component {
 
                 </div>
               </div>
+            </div>
+          </div>
+
+          <div className="hero-foot">
+            <div
+              className="container is-pos-relative"
+              style={{ height: '50px', marginBottom: '40px' }}
+            >
+              <ScrollIcon />
             </div>
           </div>
 

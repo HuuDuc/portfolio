@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import PropTypes from 'prop-types'
+// import PropTypes from 'prop-types'
 import classnames from 'classnames'
 
 import Icon from 'react-fa'
@@ -8,6 +8,12 @@ class Menu extends Component {
 
   render() {
     const { show } = this.props
+
+    document
+      .getElementsByTagName('body')[0]
+      .style
+      .overflowY = show ? 'hidden' : 'initial'
+
     return (
       <div className={classnames({
         'menu-container': true,
