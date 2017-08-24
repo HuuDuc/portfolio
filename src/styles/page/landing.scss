@@ -5,16 +5,10 @@
     }
 
     .initial {
-      animation: AnimationName 4s ease infinite;
+      animation: InitialAnimation 4s ease infinite;
 
       background: linear-gradient(300deg, $color-black, $color-pink);
       background-size: 400% 400%;
-
-      @keyframes AnimationName {
-        0% {background-position: 0% 50%}
-        50% {background-position: 100% 50%}
-        100% {background-position: 0% 50%}
-      }
 
       height: 400px;
       left: calc(50% - 200px);
@@ -23,12 +17,18 @@
       width: 400px;
       z-index: 0;
 
+      @keyframes InitialAnimation {
+        0% {background-position: 0% 50%}
+        50% {background-position: 100% 50%}
+        100% {background-position: 0% 50%}
+      }
+
       @include mobile {
         background-size: 300% 300%;
         height: 100px;
         left: inherit;
         position: absolute;
-        right: 10px;
+        right: 20px;
         top: calc(50% - 50px);
         width: 100px;
       }
@@ -58,11 +58,11 @@
           }
 
           &:nth-child(2) {
-            width: 160px;
+            width: 165px;
           }
 
           &:last-child {
-            width: 105px;
+            width: 108px;
           }
         }
       }

@@ -1,15 +1,50 @@
-@-webkit-keyframes InitialAnimation {
-  0% {background-position: 0% 50%}
-  50% {background-position: 100% 50%}
-  100% {background-position: 0% 50%}
+@mixin animationfromright {
+  @keyframes AnimationFromRight {
+    0% {
+      margin-left: 20px;
+      opacity: 0;
+    }
+
+    100% {
+      margin-left: 0;
+      opacity: 1;
+    }
+  }
 }
-@-moz-keyframes InitialAnimation {
-  0% {background-position: 0% 50%}
-  50% {background-position: 100% 50%}
-  100% {background-position: 0% 50%}
+
+@mixin animationfromleft {
+  @keyframes AnimationFromLeft {
+    0% {
+      margin-left: -20px;
+      opacity: 0;
+    }
+
+    100% {
+      margin-left: 0;
+      opacity: 1;
+    }
+  }
 }
-@keyframes InitialAnimation {
-  0% {background-position: 0% 50%}
-  50% {background-position: 100% 50%}
-  100% {background-position: 0% 50%}
+
+@mixin animationfrombottom {
+  @keyframes AnimationFromBottom {
+    100% {
+      margin-top: 0;
+      opacity: 1;
+    }
+  }
+}
+
+@mixin menuiconshow {
+  @keyframes menuIconShow {
+    0% {
+      margin-left: -20px;
+      opacity: 0;
+    }
+
+    100% {
+      margin-left: 0;
+      opacity: 1;
+    }
+  }
 }

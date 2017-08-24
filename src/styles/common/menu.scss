@@ -1,42 +1,85 @@
-$menu-hide-scale: 0.85;
+$menu-hide-scale: .85;
 $menu-show-scale: 1;
+$menu-animation-delay: .1s;
 
 .menu-container {
+  // -ms-transform: scale($menu-hide-scale);
+  // -webkit-transform: scale($menu-hide-scale);
   height: 100%;
-  position: fixed;
-  width: 100%;
   opacity: 0;
-  z-index: 0;
-
-  -ms-transform: scale($menu-hide-scale);
-  -webkit-transform: scale($menu-hide-scale);
+  position: fixed;
   transform: scale($menu-hide-scale);
-
   transition: transform .15s, opacity .15s;
-
-  &.show {
-    -ms-transform: scale($menu-show-scale);
-    -webkit-transform: scale($menu-show-scale);
-    transform: scale($menu-show-scale);
-    opacity: 1;
-    z-index: 100;
-  }
+  width: 100%;
+  z-index: 0;
 
   .hero {
     background-color: $color-black;
 
-    .main-content {
-      // @include mobile {
-      //   margin-left: 20px;
-      // }
-    }
-
     ul {
-      margin-left: 0;
       li {
+        margin-left: 0;
+        opacity: 0;
+
         a {
           display: block;
           margin-bottom: 20px;
+        }
+      }
+    }
+
+    p.is-separation {
+      margin-left: 20px;
+      opacity: 0;
+    }
+    .socials .column {
+      margin-left: 20px;
+      opacity: 0;
+    }
+  }
+
+  &.show {
+    // -ms-transform: scale($menu-show-scale);
+    // -webkit-transform: scale($menu-show-scale);
+    opacity: 1;
+    transform: scale($menu-show-scale);
+    z-index: 100;
+
+    .hero {
+
+      ul {
+
+        @for $i from 1 to 5 {
+
+          li {
+            &:nth-child(#{$i}) {
+              animation: AnimationFromLeft .8s ease 1;
+              animation-delay: $i * $menu-animation-delay;
+              animation-fill-mode: forwards;
+              @include animationfromleft;
+            }
+          }
+
+        }
+
+
+      }
+
+      p.is-separation {
+        animation: AnimationFromRight .8s ease 1;
+        animation-delay: 5 * $menu-animation-delay;
+        animation-fill-mode: forwards;
+        @include animationfromright;
+      }
+
+      .socials .column {
+        @for $i from 1 to 4 {
+          &:nth-child(#{$i}) {
+            animation: AnimationFromRight .8s ease 1;
+            animation-delay: (5 * $menu-animation-delay) + ($i * $menu-animation-delay);
+            animation-fill-mode: forwards;
+            @include animationfromright;
+          }
         }
       }
     }

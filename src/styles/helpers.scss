@@ -64,11 +64,13 @@ $color-white: #fff;
 .no-letter-spacing {
   color: $color-grey-60;
   font-weight: lighter;
-  letter-spacing: -2px;
+  letter-spacing: -3px;
 }
+
 .is-separation {
   margin: 20px 0;
 }
+
 .is-pos-relative {
   position: relative;
 }

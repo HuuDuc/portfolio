@@ -39,8 +39,8 @@ class Landing extends Component {
                 <div className="social column is-hidden-mobile is-1 has-text-right">
 
                   <p><a href="https://twitter.com/huuducweb"><Icon name="twitter"/></a></p>
-                  <p><a href="https://twitter.com/huuducweb"><Icon name="linkedin"/></a></p>
-                  <p><a href="https://twitter.com/huuducweb"><Icon name="github"/></a></p>
+                  <p><a href="http://www.linkedin.com/in/stephanehuuducnguyen"><Icon name="linkedin"/></a></p>
+                  <p><a href="https://github.com/HuuDuc"><Icon name="github"/></a></p>
 
                 </div>
               </div>

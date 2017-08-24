@@ -2,6 +2,7 @@
 @import 'helpers';
 @import url('https://fonts.googleapis.com/earlyaccess/notosanstc.css');
 @import 'extends';
+@import 'animation';
 
 @import 'common/logo';
 @import 'common/menu-icon';
@@ -10,7 +11,6 @@
 
 @import 'page/landing';
 
-@import 'animation';
 
 * {
   -webkit-tap-highlight-color: transparent !important;

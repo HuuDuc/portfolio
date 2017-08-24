@@ -57,27 +57,27 @@ class Menu extends Component {
 
                   <p className="no-letter-spacing is-separation">{String.fromCharCode(8212).repeat(5)}</p>
 
-                  <div className="columns is-hidden-mobile">
+                  <div className="socials columns is-hidden-mobile">
                     <div className="column is-2">
                       <a href="https://twitter.com/huuducweb"><Icon name="twitter"/></a>
                     </div>
                     <div className="column is-2">
-                      <a href="https://twitter.com/huuducweb"><Icon name="linkedin"/></a>
+                      <a href="http://www.linkedin.com/in/stephanehuuducnguyen"><Icon name="linkedin"/></a>
                     </div>
                     <div className="column is-2">
-                      <a href="https://twitter.com/huuducweb"><Icon name="github"/></a>
+                      <a href="https://github.com/HuuDuc"><Icon name="github"/></a>
                     </div>
                   </div>
 
-                  <div className="columns is-mobile is-hidden-desktop is-hidden-tablet is-hidden-widescreen">
+                  <div className="socials columns is-mobile is-hidden-desktop is-hidden-tablet is-hidden-widescreen">
                     <div className="column is-2">
                       <a href="https://twitter.com/huuducweb"><Icon name="twitter"/></a>
                     </div>
                     <div className="column is-2">
-                      <a href="https://twitter.com/huuducweb"><Icon name="linkedin"/></a>
+                      <a href="http://www.linkedin.com/in/stephanehuuducnguyen"><Icon name="linkedin"/></a>
                     </div>
                     <div className="column is-2">
-                      <a href="https://twitter.com/huuducweb"><Icon name="github"/></a>
+                      <a href="https://github.com/HuuDuc"><Icon name="github"/></a>
                     </div>
                   </div>
 
