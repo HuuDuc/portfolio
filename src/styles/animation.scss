@@ -35,6 +35,19 @@
   }
 }
 
+@mixin animationfromtop {
+  @keyframes AnimationFromTop {
+    0% {
+      margin-top: 20px;
+      opacity: 0;
+    }
+    100% {
+      margin-top: 0;
+      opacity: 1;
+    }
+  }
+}
+
 @mixin menuiconshow {
   @keyframes menuIconShow {
     0% {

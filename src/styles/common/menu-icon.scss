@@ -4,6 +4,11 @@ $menu-icon-size-space: 11px;
 
 .menu-icon {
 
+  animation: AnimationFromRight .6s ease 1;
+  animation-delay: 1.5s;
+  animation-fill-mode: forwards;
+  @include animationfromright;
+
   cursor: pointer;
   height: $menu-icon-size;
   position: fixed;
@@ -11,6 +16,9 @@ $menu-icon-size-space: 11px;
   top: 35px;
   width: $menu-icon-size;
   z-index: 2000;
+
+  margin-left: 20px;
+  opacity: 0;
 
   @include mobile {
     font-size: 10%;

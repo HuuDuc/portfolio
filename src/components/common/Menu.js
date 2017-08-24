@@ -1,10 +1,19 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import classnames from 'classnames'
+import QueryString from 'query-string'
 
 import Icon from 'react-fa'
 
 class Menu extends Component {
+
+  mailTo = () => {
+    const params = {
+      subject: 'Hello from my website',
+      body: 'Your message here'
+    }
+    document.location.href = `mailto:s.nguyen@outlook.com?${QueryString.stringify(params)}`
+  }
 
   render() {
     const { show } = this.props
@@ -72,6 +81,9 @@ class Menu extends Component {
                     <div className="column is-2">
                       <a href="https://github.com/HuuDuc"><Icon name="github"/></a>
                     </div>
+                    <div className="column is-2">
+                      <a onClick={this.mailTo}><Icon name="paper-plane"/></a>
+                    </div>
                   </div>
 
                   <div className="socials columns is-mobile is-hidden-desktop is-hidden-tablet is-hidden-widescreen">
@@ -83,6 +95,9 @@ class Menu extends Component {
                     </div>
                     <div className="column is-2">
                       <a href="https://github.com/HuuDuc"><Icon name="github"/></a>
+                    </div>
+                    <div className="column is-2">
+                      <a onClick={this.mailTo}><Icon name="paper-plane"/></a>
                     </div>
                   </div>
 

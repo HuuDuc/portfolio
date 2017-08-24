@@ -5,14 +5,14 @@ class NotFound404 extends Component {
 
   componentDidMount() {
     document
-      .getElementsByTagName('body')[0]
+      .getElementsByTagName('html')[0]
       .style
-      .overflowY = 'hidden'
+      .overflow = 'hidden'
   }
 
   componentWillUnmount() {
     document
-      .getElementsByTagName('body')[0]
+      .getElementsByTagName('html')[0]
       .style
       .overflowY = 'initial'
   }

@@ -175,28 +175,30 @@ class About extends Component {
 
         </section>
 
-        <div className="container">
-          <div className="columns">
-            {
-              biographies.map((biography, i) => {
-                return (
-                  <div
-                    key={`biography${i}`}
-                    className="column"
-                  >
-                    <section className="section">
-                      <h5 className="title is-5 is-bold is-uppercase">{biography.section}</h5>
-                      <h6 className="title is-6 is-normal">{biography.section_zh}</h6>
-                      <div className="content">
-                        <p dangerouslySetInnerHTML={{ __html: biography.description }} />
-                      </div>
-                    </section>
-                  </div>
-                );
-              })
-            }
+        <section className="hero is-light">
+          <div className="container">
+            <div className="columns biographies">
+              {
+                biographies.map((biography, i) => {
+                  return (
+                    <div
+                      key={`biography${i}`}
+                      className="column"
+                    >
+                      <section className="section">
+                        <h5 className="title is-5 is-bold is-uppercase">{biography.section}</h5>
+                        <h6 className="title is-6 is-normal">{biography.section_zh}</h6>
+                        <div className="content">
+                          <p className="is-paragraph" dangerouslySetInnerHTML={{ __html: biography.description }} />
+                        </div>
+                      </section>
+                    </div>
+                  );
+                })
+              }
+            </div>
           </div>
-        </div>
+        </section>
 
         <Footer />
 

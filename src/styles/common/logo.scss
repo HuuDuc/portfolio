@@ -6,6 +6,14 @@
 
   transition: color .2s;
 
+  margin-left: -20px;
+  opacity: 0;
+
+  animation: AnimationFromLeft .6s ease 1;
+  animation-delay: 1.5s;
+  animation-fill-mode: forwards;
+  @include animationfromright;
+
   @include mobile {
     top: 22px;
     left: 20px;

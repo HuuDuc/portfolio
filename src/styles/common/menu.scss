@@ -74,7 +74,7 @@ $menu-animation-duration: .6s;
       }
 
       .socials .column {
-        @for $i from 1 to 4 {
+        @for $i from 1 to 5 {
           &:nth-child(#{$i}) {
             animation: AnimationFromRight $menu-animation-duration ease 1;
             animation-delay: (5 * $menu-animation-delay) + ($i * $menu-animation-delay);

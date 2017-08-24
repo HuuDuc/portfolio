@@ -48,7 +48,7 @@ class Loading extends Component {
       >
         <div className="hero-body">
           <div className="container has-text-centered">
-            <span className="is-uppercase is-normal is-size-3">loading</span><br/>
+            <span className="is-uppercase is-normal is-size-3 is-size-5-mobile">loading</span><br/>
           </div>
         </div>
       </div>

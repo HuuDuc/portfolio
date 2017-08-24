@@ -12,6 +12,7 @@
 
 @import 'page/error';
 @import 'page/landing';
+@import 'page/about';
 
 
 * {
@@ -40,6 +41,15 @@ a {
   transition: color .4s;
   &:hover {
     color: $color-pink;
+  }
+}
+
+.is-paragraph {
+  font-size: 16px;
+  line-height: 30px;
+  @include mobile {
+    font-size: 14px;
+    line-height: 22px;
   }
 }
 
