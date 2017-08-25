@@ -11,15 +11,15 @@
       top: calc(50% - 211px / 2);
       width: 20px;
 
-      margin-top: -20px;
-      opacity: 0;
+      // margin-top: -20px;
+      // opacity: 0;
 
-      &.show {
-        animation: AnimationFromBottom $menu-animation-duration ease 1;
-        animation-delay: 1.2s;
-        animation-fill-mode: forwards;
-        @include animationfrombottom;
-      }
+      // &.show {
+      //   animation: AnimationFromBottom $menu-animation-duration ease 1;
+      //   animation-delay: 1.2s;
+      //   animation-fill-mode: forwards;
+      //   @include animationfrombottom;
+      // }
     }
 
     .socials {
@@ -29,8 +29,8 @@
       top: calc(50% - 210px / 2);
       width: 20px;
 
-      margin-top: -20px;
-      opacity: 0;
+      // margin-top: -20px;
+      // opacity: 0;
 
       p {
         margin-bottom: 20px;
@@ -42,12 +42,12 @@
         }
       }
 
-      &.show {
-        animation: AnimationFromBottom $menu-animation-duration ease 1;
-        animation-delay: 1.2s;
-        animation-fill-mode: forwards;
-        @include animationfrombottom;
-      }
+      // &.show {
+      //   animation: AnimationFromBottom $menu-animation-duration ease 1;
+      //   animation-delay: 1.2s;
+      //   animation-fill-mode: forwards;
+      //   @include animationfrombottom;
+      // }
     }
 
     .initial {
@@ -63,8 +63,8 @@
       width: 500px;
       z-index: -1;
 
-      margin-top: 20px;
-      opacity: 0;
+      // margin-top: 20px;
+      // opacity: 0;
 
       @keyframes InitialAnimation {
         0% {background-position: 0% 50%}
@@ -79,12 +79,12 @@
         width: 250px;
       }
 
-      &.show {
-        animation: InitialAnimation 4s ease infinite, AnimationFromTop $menu-animation-duration ease 1;
-        animation-delay: 1.2s;
-        animation-fill-mode: forwards;
-        @include animationfromtop;
-      }
+      // &.show {
+      //   animation: InitialAnimation 4s ease infinite, AnimationFromTop $menu-animation-duration ease 1;
+      //   animation-delay: 1.2s;
+      //   animation-fill-mode: forwards;
+      //   @include animationfromtop;
+      // }
     }
 
     .middle-content {

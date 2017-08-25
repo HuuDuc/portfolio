@@ -3,28 +3,24 @@ $menu-icon-size: 40px;
 $menu-icon-size-space: 11px;
 
 .menu-icon {
-
+  @include animationfromright;
+  @include mobile {
+    font-size: 10%;
+    right: 22px;
+    top: 20px;
+  }
   animation: AnimationFromRight .6s ease 1;
   animation-delay: 1.5s;
   animation-fill-mode: forwards;
-  @include animationfromright;
-
   cursor: pointer;
   height: $menu-icon-size;
+  margin-left: 20px;
+  opacity: 0;
   position: fixed;
   right: 50px;
   top: 35px;
   width: $menu-icon-size;
   z-index: 2000;
-
-  margin-left: 20px;
-  opacity: 0;
-
-  @include mobile {
-    font-size: 10%;
-    right: 20px;
-    top: 20px;
-  }
 
   > div {
     background-color: $color-black;
@@ -66,12 +62,14 @@ $menu-icon-size-space: 11px;
         0% {
           background-color: $color-pink;
         }
+
         100% {
           background-color: $color-white;
           bottom: calc(50% - 1px);
         }
       }
     }
+
     &::before {
       animation: OpenMenuIconBefore .4s ease 1;
       animation-fill-mode: forwards;
@@ -80,6 +78,7 @@ $menu-icon-size-space: 11px;
         0% {
           background-color: $color-pink;
         }
+
         100% {
           background-color: $color-white;
           top: calc(50% - 1px);

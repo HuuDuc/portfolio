@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
+import ScrollReveal from 'scrollreveal'
 // import Icon from 'react-fa'
 // import classnames from 'classnames'
 
@@ -108,8 +109,27 @@ class About extends Component {
     }
   }
 
+  componentWillMount() {
+    document.title = 'About | Stéphane Nguyen'
+  }
+
   componentDidMount() {
     this.setState({ loading: false })
+    this.animation()
+  }
+
+  animation = () => {
+    const sr = ScrollReveal()
+    sr
+      .reveal('.intro h2', { origin: 'top', delay: 800, scale: 1 }, 500)
+      .reveal('.intro h4', { origin: 'left', delay: 800, scale: 1 }, 500)
+      .reveal('.intro .columns', { origin: 'right', delay: 800, scale: 1 }, 500)
+      //.reveal('.biographies section', { delay: 800, scale: 1 }, 500)
+      .reveal('.taipei .img', { origin: 'left', delay: 500, scale: 1 }, 500)
+      .reveal('.taipei .description', { origin: 'right', delay: 500, scale: 1 }, 500)
+      .reveal('.hero.numbers h3', { origin: 'left', delay: 500, scale: 1 }, 100)
+      .reveal('.hero.numbers p.has-text-centered', { origin: 'right', delay: 500, scale: 1 }, 100)
+      .reveal('.hero.numbers .columns .column', { delay: 500, scale: 1 }, 100)
   }
 
   onChangeNumber = (selected_number) => {
@@ -147,20 +167,27 @@ class About extends Component {
     //   description_number_show
     // } = this.state
 
-    const { loading, biographies } = this.state
+    const { loading } = this.state
 
     return (
-      <div id="about">
+      <div className="about-page">
 
-        <section className="hero is-fullheight">
+        <section className="intro hero is-fullheight">
           <div className="hero-body">
             <div className="container">
-              <h3 className="has-text-centered title is-3 is-uppercase">
+              <h2 className="has-text-centered title is-2 is-uppercase">
                 about
-              </h3>
-              <h5 className="has-text-centered subtitle is-5">
+              </h2>
+              <h4 className="has-text-centered subtitle is-4">
                 關於我
-              </h5>
+              </h4>
+              <div className="columns">
+                <div className="column is-half is-offset-one-quarter">
+                  <p className="is-paragraph has-text-centered">
+                    {'Who am I ? I am Stéphane Nguyen, a french front-end developer with over 9 years experiences in the web industry.'}
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
 
@@ -175,30 +202,89 @@ class About extends Component {
 
         </section>
 
-        <section className="hero is-light">
-          <div className="container">
-            <div className="columns biographies">
-              {
-                biographies.map((biography, i) => {
-                  return (
-                    <div
-                      key={`biography${i}`}
-                      className="column"
-                    >
-                      <section className="section">
-                        <h5 className="title is-5 is-bold is-uppercase">{biography.section}</h5>
-                        <h6 className="title is-6 is-normal">{biography.section_zh}</h6>
-                        <div className="content">
-                          <p className="is-paragraph" dangerouslySetInnerHTML={{ __html: biography.description }} />
-                        </div>
-                      </section>
-                    </div>
-                  );
-                })
-              }
+        <section className="numbers hero">
+          <div className="hero-body">
+            <div className="container">
+              <h3 className="title is-3 is-uppercase has-text-centered">few numbers</h3>
+              <p
+                className="has-text-centered is-paragraph"
+                dangerouslySetInnerHTML={{ __html: 'Most of the time, numbers are more accurate and efficient to know something or someone.' }}
+              />
+            <div className="columns">
+                <div className="is-pos-relative column has-text-centered">
+                  <p className="title is-5 is-uppercase is-bold">age</p>
+                  <p className="subtitle is-6">年齡</p>
+                  <p className="is-size-1">29</p>
+                </div>
+                <div className="is-pos-relative column has-text-centered">
+                  <p className="title is-5 is-uppercase is-bold">experiences</p>
+                  <p className="subtitle is-6">經驗</p>
+                  <p className="is-size-1">10</p>
+                </div>
+                <div className="is-pos-relative column has-text-centered">
+                  <p className="title is-5 is-uppercase is-bold">countries lived</p>
+                  <p className="subtitle is-6">國家居住</p>
+                  <p className="is-size-1">2</p>
+                </div>
+              </div>
             </div>
           </div>
         </section>
+
+        <section className="hero is-light">
+
+          <div className="hero-body">
+            <div className="container taipei">
+              <div className="img" />
+              <section className="description section">
+                <h4 className="has-text-centered title is-4 is-uppercase">taiwan</h4>
+                <h5 className="has-text-centered title is-5 is-normal">台灣</h5>
+                <div className="has-text-centered has-text-centered has-text-left-mobile">
+                  <p
+                    className="is-paragraph"
+                    dangerouslySetInnerHTML={{ __html: 'Since July 2014, I left France to move to Taiwan. Taiwan is becoming my home. <br/> So far, I love this place and would like to stay all life.' }}
+                  />
+                </div>
+              </section>
+            </div>
+          </div>
+
+        </section>
+
+        <section className="hero is-fullheight is-primary">
+          <div className="hero-body">
+            <div className="container">
+              test
+            </div>
+          </div>
+        </section>
+
+        {/*
+          <section className="hero is-light">
+            <div className="container">
+              <div className="columns biographies">
+                {
+                  biographies.map((biography, i) => {
+                    return (
+                      <div
+                        key={`biography${i}`}
+                        className="column"
+                      >
+                        <section className="section">
+                          <h5 className="title is-5 is-bold is-uppercase">{biography.section}</h5>
+                          <h6 className="title is-6 is-normal">{biography.section_zh}</h6>
+                          <div className="content">
+                            <p className="is-paragraph" dangerouslySetInnerHTML={{ __html: biography.description }} />
+                          </div>
+                        </section>
+                      </div>
+                    );
+                  })
+                }
+              </div>
+            </div>
+          </section>
+        */}
 
         <Footer />
 

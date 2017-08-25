@@ -9,6 +9,7 @@
 
   &.hide {
     animation: LoadingAnimation 2s ease 1;
+    animation-delay: .5s;
     animation-fill-mode: forwards;
 
     @keyframes LoadingAnimation {
@@ -16,6 +17,7 @@
         background-color: $color-pink;
         color: $color-white;
       }
+
       100% {
         background-color: $color-pink;
         color: $color-white;

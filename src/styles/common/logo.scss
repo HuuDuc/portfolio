@@ -1,24 +1,24 @@
 .logo {
-  position: fixed;
-  left: 50px;
-  top: 35px;
-  z-index: 2000;
-
-  transition: color .2s;
-
-  margin-left: -20px;
-  opacity: 0;
-
+  @include mobile {
+    left: 22px;
+    top: 22px;
+  }
+  @include desktop {
+    &:hover {
+      color: $color-white;
+    }
+  }
+  @include animationfromright;
   animation: AnimationFromLeft .6s ease 1;
   animation-delay: 1.5s;
   animation-fill-mode: forwards;
-  @include animationfromright;
-
-  @include mobile {
-    top: 22px;
-    left: 20px;
-
-  }
+  left: 50px;
+  margin-left: -20px;
+  opacity: 0;
+  position: fixed;
+  top: 35px;
+  transition: color .2s;
+  z-index: 2000;
 
   &.show {
     color: $color-white;

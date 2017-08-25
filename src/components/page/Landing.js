@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 import Icon from 'react-fa'
 import QueryString from 'query-string'
 import classnames from 'classnames'
+import ScrollReveal from 'scrollreveal'
 // import Particles from 'react-particles-js'
 
 
@@ -18,8 +19,21 @@ class Landing extends Component {
     }
   }
 
+  componentWillMount() {
+    document.title = 'Portfolio | Stéphane Nguyen'
+  }
+
   componentDidMount() {
     this.setState({ loading: false })
+    this.animation()
+  }
+
+  animation = () => {
+    const sr = ScrollReveal()
+    sr
+      .reveal('.initial', { delay: 1200 })
+      .reveal('.socials', { origin: 'top', delay: 1200, scale: 1, })
+      .reveal('.developer', { origin: 'top', delay: 1200, scale: 1, })
   }
 
   mailTo = () => {
@@ -45,7 +59,10 @@ class Landing extends Component {
               show: !loading
             })}
           >
-            <img src={require('+/initial.png')} alt="Stephane Nguyen"/>
+            <img
+              src={require('+/initial.png')}
+              alt="Stephane Nguyen"
+            />
           </div>
 
           <div className={classnames({
@@ -54,7 +71,10 @@ class Landing extends Component {
               show: !loading
             })}
           >
-            <img src={require('+/frontenddeveloper.png')}/>
+            <img
+              src={require('+/frontenddeveloper.png')}
+              alt="front-end developer"
+            />
           </div>
 
           <div className={classnames({

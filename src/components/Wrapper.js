@@ -1,5 +1,4 @@
 import React, { Component } from 'react'
-import PropTypes from 'prop-types'
 
 import Logo from '@/common/Logo'
 import MenuIcon from '@/common/MenuIcon'
@@ -15,7 +14,6 @@ class Wrapper extends Component {
   }
 
   onToggleMenu = () => {
-    console.log('show_menu', !this.state.show_menu)
     this.setState({
       show_menu: !this.state.show_menu
     })

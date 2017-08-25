@@ -21,6 +21,7 @@ class Logo extends Component {
           title: true,
           'is-3': true,
           'is-size-4-mobile': true,
+          'is-pointer': true,
           show
         })}
         onClick={this.goHome}

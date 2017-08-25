@@ -1,6 +1,7 @@
 @import '~bulma';
-@import 'helpers';
 @import url('https://fonts.googleapis.com/earlyaccess/notosanstc.css');
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans');
+@import 'helpers';
 @import 'extends';
 @import 'animation';
 
@@ -45,11 +46,11 @@ a {
 }
 
 .is-paragraph {
-  font-size: 16px;
+  font-size: 14px;
   line-height: 30px;
   @include mobile {
-    font-size: 14px;
-    line-height: 22px;
+    font-size: 4vw;
+    line-height: 2;
   }
 }
 
@@ -76,13 +77,27 @@ p {
 }
 
 .title {
+  font-family: 'Josefin Sans', 'Noto Sans TC', 'Microsoft Yahei', '微軟正黑體', sans-serif;
   line-height: 1.5em;
 }
 
 .is-uppercase {
+  font-family: 'Josefin Sans', 'Noto Sans TC', 'Microsoft Yahei', '微軟正黑體', sans-serif;
   letter-spacing: 2.2px;
 }
 
 .is-pink {
   color: $color-pink;
+}
+.hero {
+  &.is-pink {
+    .hero-head,
+    .hero-body,
+    .hero-foot {
+      background-color: $color-pink;
+    }
+    * {
+      color: $color-white;
+    }
+  }
 }

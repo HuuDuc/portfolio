@@ -41,6 +41,7 @@
     "react-i18next": "^4.8.0",
     "react-particles-js": "^1.5.0",
     "react-router": "^2.8.1",
+    "scrollreveal": "^3.3.6",
     "store": "^2.0.12",
     "style-loader": "0.18.2",
     "sw-precache-webpack-plugin": "0.11.3",

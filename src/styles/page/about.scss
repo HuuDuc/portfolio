@@ -1,156 +1,62 @@
-#about {
-  .biographies {
-    h5 {
-      margin-bottom: 0;
+.about-page {
+  .taipei {
+    .img {
+      @include mobile {
+        height: 300px;
+      }
+      background-image: url('../assets/taipei.jpg');
+      background-position: center;
+      background-size: cover;
+      height: 500px;
+      width: 100%;
+    }
+
+    .description {
+      @include mobile {
+        margin-left: inherit;
+        margin-right: inherit;
+        margin-top: -80px;
+      }
+      background-color: $color-white;
+      margin-left: 25px;
+      margin-right: 25px;
+      margin-top: -70px;
+      z-index: 100;
+    }
+  }
+
+  .numbers {
+
+    .columns {
+      margin-top: 40px;
+    }
+
+    .column {
+
+      &::after {
+        @extend %before-after;
+        display: none;
+      }
+
+      @include mobile {
+        margin-top: 15px;
+
+        &:last-child {
+          &::after {
+            display: none;
+          }
+        }
+
+        &::after {
+          background-color: $color-grey-60;
+          bottom: 0;
+          display: block;
+          height: 1px;
+          left: calc(50% - 15px);
+          top: inherit;
+          width: 30px;
+        }
+      }
     }
   }
 }
-
-// #about {
-//
-//   section {
-//     &:first-child {
-//       * {
-//         color: $color-white;
-//       }
-//       background-color: $color-pink;
-//       position: relative;
-//       h1 {
-//         color: $color-white;
-//         width: 100%;
-//         font-size: 5em;
-//       }
-//     }
-//
-//     .particles-container {
-//       height: 100%;
-//       left: 0;
-//       overflow: hidden;
-//       position: absolute;
-//       top: 0;
-//       width: 100%;
-//       z-index: 0;
-//     }
-//   }
-//
-//   .close {
-//     font-size: 1em;
-//     margin-top: 20px;
-//     cursor: pointer;
-//   }
-//
-//   .biography {
-//     .columns {
-//       margin: 80px 0;
-//       &:last-child {
-//         margin-bottom: 0;
-//       }
-//
-//       p {
-//         &:first-child {
-//           margin-bottom: 20px;
-//         }
-//       }
-//     }
-//   }
-//   .numbers {
-//     margin-top: 62px;
-//     .column {
-//       padding-bottom: 20px;
-//       p {
-//         transition: color .4s;
-//         &:last-child {
-//           margin-top: 0px;
-//           font-size: 9em;
-//           @extend .is-pointer;
-//         }
-//       }
-//       &.is-active {
-//         position: relative;
-//         &:after {
-//           @extend .before-after;
-//           background-color: transparent;
-//           top: inherit;
-//           bottom: 0;
-//           left: calc(50% - 12.5px);
-//
-//           height: 0;
-//           border-style: solid;
-//           border-width: 0 25px 25px 25px;
-//           border-color: transparent transparent $color-pink transparent;
-//           width: 0;
-//         }
-//       }
-//     }
-//   }
-//
-//   .description-nb {
-//     background-color: $color-pink;
-//     height: 152px;
-//     padding: 40px 0;
-//     p {
-//       color: $color-white;
-//       opacity: 0;
-//
-//       transition: .4s all;
-//
-//       &.show {
-//         opacity: 1;
-//       }
-//
-//
-//     }
-//   }
-//
-//   .experiences {
-//     margin: 100px 0;
-//     .list {
-//       margin: 40px;
-//       .columns {
-//         margin-bottom: 50px;
-//         .column {
-//           &:first-child {
-//             @extend .has-text-right;
-//             border-right: 1px solid $color-grey-60;
-//             padding-right: 20px;
-//             position: relative;
-//
-//             &:before {
-//               @extend .before-after;
-//               background-color: $color-grey-60;
-//               border-radius: 5px;
-//               height: 10px;
-//               width: 10px;
-//               left: inherit;
-//               right: -6px;
-//               top: -25px;
-//             }
-//           }
-//           &:last-child {
-//             border-left: 1px solid $color-grey-60;
-//             padding-left: 20px;
-//           }
-//         }
-//         &.reverse {
-//           .column {
-//             &:first-child {
-//               @extend .has-text-right;
-//             }
-//           }
-//         }
-//
-//         &:first-child {
-//           .column {
-//             border-color: $color-pink;
-//             &:first-child {
-//               &:before {
-//                 background-color: $color-pink;
-//               }
-//             }
-//           }
-//         }
-//       }
-//     }
-//   }
-//
-// }

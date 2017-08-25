@@ -15,13 +15,13 @@ class Loading extends Component {
 
   componentWillReceiveProps(nextProps) {
     const { show } = nextProps
+    // if (!show) {
+    //   this.setState({ show })
+    // }
     if (!show) {
-      setTimeout(() => this.setState({ show }), 500)
-    }
-    if (show) {
       this.setState({
         show,
-        hide: false
+        hide: true
       })
     }
   }
@@ -31,11 +31,7 @@ class Loading extends Component {
   }
 
   render() {
-    const { show, hide } = this.state
-
-    if (!show && !hide) {
-      this.hide()
-    }
+    const { hide } = this.state
 
     return (
       <div
