@@ -7,6 +7,8 @@
 
 @import 'common/loading';
 @import 'common/logo';
+@import 'common/developer';
+@import 'common/social';
 @import 'common/menu-icon';
 @import 'common/menu';
 @import 'common/scroll-icon';
@@ -46,7 +48,7 @@ a {
 }
 
 .is-paragraph {
-  font-size: 14px;
+  font-size: 16px;
   line-height: 30px;
   @include mobile {
     font-size: 4vw;

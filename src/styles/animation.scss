@@ -25,6 +25,29 @@
     }
   }
 }
+@mixin animationcaroussel {
+  @keyframes AnimationCaroussel {
+    0% {
+      margin-left: -20px;
+      opacity: 0;
+    }
+
+    10% {
+      margin-left: 0;
+      opacity: 1;
+    }
+
+    90% {
+      margin-left: 0;
+      opacity: 1;
+    }
+
+    100% {
+      margin-left: 20px;
+      opacity: 0;
+    }
+  }
+}
 
 @mixin animationfrombottom {
   @keyframes AnimationFromBottom {

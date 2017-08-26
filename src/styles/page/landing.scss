@@ -4,50 +4,115 @@
       position: relative;
     }
 
-    .developer {
-      height: 211px;
-      left: 50px;
+    // .developer {
+    //   height: 211px;
+    //   left: 50px;
+    //   position: absolute;
+    //   top: calc(50% - 211px / 2);
+    //   width: 20px;
+    //
+    //   // margin-top: -20px;
+    //   // opacity: 0;
+    //
+    //   // &.show {
+    //   //   animation: AnimationFromBottom $menu-animation-duration ease 1;
+    //   //   animation-delay: 1.2s;
+    //   //   animation-fill-mode: forwards;
+    //   //   @include animationfrombottom;
+    //   // }
+    // }
+
+    // .socials {
+    //   height: 210px;
+    //   position: absolute;
+    //   right: 50px;
+    //   top: calc(50% - 210px / 2);
+    //   width: 20px;
+    //
+    //   // margin-top: -20px;
+    //   // opacity: 0;
+    //
+    //   p {
+    //     margin-bottom: 20px;
+    //     &:nth-child(3) {
+    //       margin-bottom: 10px;
+    //     }
+    //     &:nth-child(5) {
+    //       margin-top: 20px;
+    //     }
+    //   }
+    //
+    //   // &.show {
+    //   //   animation: AnimationFromBottom $menu-animation-duration ease 1;
+    //   //   animation-delay: 1.2s;
+    //   //   animation-fill-mode: forwards;
+    //   //   @include animationfrombottom;
+    //   // }
+    // }
+
+    .caroussel {
+      height: 100%;
+      left: 0;
       position: absolute;
-      top: calc(50% - 211px / 2);
-      width: 20px;
+      top: 0;
+      width: 100%;
+      z-index: 20;
 
-      // margin-top: -20px;
-      // opacity: 0;
-
-      // &.show {
-      //   animation: AnimationFromBottom $menu-animation-duration ease 1;
-      //   animation-delay: 1.2s;
-      //   animation-fill-mode: forwards;
-      //   @include animationfrombottom;
-      // }
-    }
-
-    .socials {
-      height: 210px;
-      position: absolute;
-      right: 50px;
-      top: calc(50% - 210px / 2);
-      width: 20px;
-
-      // margin-top: -20px;
-      // opacity: 0;
-
-      p {
-        margin-bottom: 20px;
-        &:nth-child(3) {
-          margin-bottom: 10px;
+      > div {
+        @include mobile {
+          background-size: 100% auto;
         }
-        &:nth-child(5) {
-          margin-top: 20px;
+        background: center $color-white no-repeat;
+        background-size: auto 100%;
+        height: 100%;
+        left: 0;
+        opacity: 0;
+        position: absolute;
+        top: 0;
+        width: 100%;
+        z-index: -1;
+
+        &:nth-child(1) {
+          background-image: url('../assets/sablier.jpg');
+        }
+        &:nth-child(2) {
+          background-image: url('../assets/glasses.jpg');
+        }
+        &:nth-child(3) {
+          background-image: url('../assets/whiskey.jpg');
+        }
+
+        &.show {
+          animation: AnimationCaroussel 5s ease 1;
+          // animation-delay: s;
+          animation-fill-mode: forwards;
+          @include animationcaroussel;
         }
       }
+    }
 
-      // &.show {
-      //   animation: AnimationFromBottom $menu-animation-duration ease 1;
-      //   animation-delay: 1.2s;
-      //   animation-fill-mode: forwards;
-      //   @include animationfrombottom;
-      // }
+    .caroussel-bar {
+      bottom: 50px;
+      height: 2px;
+      left: 50px;
+      position: absolute;
+      width: calc(40px * 3);
+      z-index: 400;
+
+      > div {
+        background-color: $color-grey-80;
+        display: inline-block;
+        height: 100%;
+        margin-right: 10px;
+        transition: background-color .4s;
+        width: 30px;
+        &:last-child {
+          margin-right: 0;
+        }
+        &.active {
+          background-color: $color-black;
+        }
+      }
     }
 
     .initial {

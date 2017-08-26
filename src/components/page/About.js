@@ -121,7 +121,7 @@ class About extends Component {
   animation = () => {
     const sr = ScrollReveal()
     sr
-      .reveal('.intro h2', { origin: 'top', delay: 800, scale: 1 }, 500)
+      .reveal('.intro h1', { origin: 'top', delay: 800, scale: 1 }, 500)
       .reveal('.intro h4', { origin: 'left', delay: 800, scale: 1 }, 500)
       .reveal('.intro .columns', { origin: 'right', delay: 800, scale: 1 }, 500)
       //.reveal('.biographies section', { delay: 800, scale: 1 }, 500)
@@ -175,10 +175,10 @@ class About extends Component {
         <section className="intro hero is-fullheight">
           <div className="hero-body">
             <div className="container">
-              <h2 className="has-text-centered title is-2 is-uppercase">
+              <h1 className="has-text-centered title is-1 is-size-2-mobile is-uppercase">
                 about
-              </h2>
-              <h4 className="has-text-centered subtitle is-4">
+              </h1>
+              <h4 className="has-text-centered subtitle is-3 is-size-4-mobile">
                 關於我
               </h4>
               <div className="columns">
@@ -205,25 +205,25 @@ class About extends Component {
         <section className="numbers hero">
           <div className="hero-body">
             <div className="container">
-              <h3 className="title is-3 is-uppercase has-text-centered">few numbers</h3>
+              <h3 className="title is-3 is-size-4-mobile is-uppercase has-text-centered">few numbers</h3>
               <p
                 className="has-text-centered is-paragraph"
                 dangerouslySetInnerHTML={{ __html: 'Most of the time, numbers are more accurate and efficient to know something or someone.' }}
               />
             <div className="columns">
                 <div className="is-pos-relative column has-text-centered">
-                  <p className="title is-5 is-uppercase is-bold">age</p>
-                  <p className="subtitle is-6">年齡</p>
+                  <p className="title is-5 is-size-6-mobile is-uppercase is-bold">age</p>
+                  <p className="subtitle is-6 is-size-7-mobile">年齡</p>
                   <p className="is-size-1">29</p>
                 </div>
                 <div className="is-pos-relative column has-text-centered">
-                  <p className="title is-5 is-uppercase is-bold">experiences</p>
-                  <p className="subtitle is-6">經驗</p>
+                  <p className="title is-5 is-size-6-mobile is-uppercase is-bold">experiences</p>
+                  <p className="subtitle is-6 is-size-7-mobile">經驗</p>
                   <p className="is-size-1">10</p>
                 </div>
                 <div className="is-pos-relative column has-text-centered">
-                  <p className="title is-5 is-uppercase is-bold">countries lived</p>
-                  <p className="subtitle is-6">國家居住</p>
+                  <p className="title is-5 is-size-6-mobile is-uppercase is-bold">countries lived</p>
+                  <p className="subtitle is-6 is-size-7-mobile">國家居住</p>
                   <p className="is-size-1">2</p>
                 </div>
               </div>
@@ -237,12 +237,12 @@ class About extends Component {
             <div className="container taipei">
               <div className="img" />
               <section className="description section">
-                <h4 className="has-text-centered title is-4 is-uppercase">taiwan</h4>
-                <h5 className="has-text-centered title is-5 is-normal">台灣</h5>
+                <h4 className="has-text-centered title is-3 is-size-4-mobile is-uppercase">taiwan</h4>
+                <h5 className="has-text-centered title is-4 is-size-5-mobile is-normal">台灣</h5>
                 <div className="has-text-centered has-text-centered has-text-left-mobile">
                   <p
                     className="is-paragraph"
-                    dangerouslySetInnerHTML={{ __html: 'Since July 2014, I left France to move to Taiwan. Taiwan is becoming my home. <br/> So far, I love this place and would like to stay all life.' }}
+                    dangerouslySetInnerHTML={{ __html: 'Since July 2014, I left France to move to Taiwan. Taipei is becoming my home. <br/> So far, I love this place and I would like to stay for the rest of my life.' }}
                   />
                 </div>
               </section>

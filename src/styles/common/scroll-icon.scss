@@ -4,6 +4,7 @@
   position: absolute;
   top: 0;
   width: 50px;
+  z-index: 400;
 
   &::before {
     @extend %before-after;

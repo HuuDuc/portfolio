@@ -1,4 +1,9 @@
 .about-page {
+  .intro {
+    .columns {
+      margin-top: 30px;
+    }
+  }
   .taipei {
     .img {
       @include mobile {

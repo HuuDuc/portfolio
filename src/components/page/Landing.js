@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
-import Icon from 'react-fa'
 import QueryString from 'query-string'
 import classnames from 'classnames'
 import ScrollReveal from 'scrollreveal'
@@ -15,7 +14,8 @@ class Landing extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      loading: true
+      loading: true,
+      caroussel: 0
     }
   }
 
@@ -26,14 +26,31 @@ class Landing extends Component {
   componentDidMount() {
     this.setState({ loading: false })
     this.animation()
+    setTimeout(() => {
+      this.setState({ caroussel: 1 })
+      this.startCaroussel()
+    }, 1200)
+  }
+
+  componentWillUnmount() {
+    clearInterval(this.interval)
   }
 
   animation = () => {
     const sr = ScrollReveal()
     sr
-      .reveal('.initial', { delay: 1200 })
+      //.reveal('.initial', { delay: 1200 })
       .reveal('.socials', { origin: 'top', delay: 1200, scale: 1, })
-      .reveal('.developer', { origin: 'top', delay: 1200, scale: 1, })
+      // .reveal('.developer', { origin: 'top', delay: 1200, scale: 1, })
+  }
+
+  startCaroussel = () => {
+    const self = this
+    this.interval = setInterval(() => {
+      let { caroussel } = self.state
+      caroussel = caroussel === 3 ? 1 : caroussel + 1
+      self.setState({ caroussel })
+    }, 5000);
   }
 
   mailTo = () => {
@@ -47,48 +64,35 @@ class Landing extends Component {
   render() {
 
     // const { router } = this.context
-    const { loading } = this.state
+    const { loading, caroussel } = this.state
 
     return (
       <div className="landing">
 
         <section className="first hero is-fullheight">
 
-          <div className={classnames({
-              initial: true,
-              show: !loading
-            })}
-          >
-            <img
-              src={require('+/initial.png')}
-              alt="Stephane Nguyen"
-            />
+          <div className="caroussel">
+            <div className={classnames({
+              show: caroussel === 1
+            })} />
+            <div className={classnames({
+              show: caroussel === 2
+            })} />
+            <div className={classnames({
+              show: caroussel === 3
+            })} />
           </div>
 
-          <div className={classnames({
-              developer: true,
-              'is-hidden-mobile': true,
-              show: !loading
-            })}
-          >
-            <img
-              src={require('+/frontenddeveloper.png')}
-              alt="front-end developer"
-            />
-          </div>
-
-          <div className={classnames({
-              socials: true,
-              'has-text-centered': true,
-              'is-hidden-mobile': true,
-              show: !loading
-            })}
-          >
-            <p><a href="https://twitter.com/huuducweb"><Icon name="twitter"/></a></p>
-            <p><a href="http://www.linkedin.com/in/stephanehuuducnguyen"><Icon name="linkedin"/></a></p>
-            <p><a href="https://github.com/HuuDuc"><Icon name="github"/></a></p>
-            <div className="bar">{String.fromCharCode(124)}</div>
-            <p><a onClick={this.mailTo}><Icon name="paper-plane"/></a></p>
+          <div className="caroussel-bar is-hidden-mobile">
+            <div className={classnames({
+              active: caroussel === 1
+            })} />
+            <div className={classnames({
+              active: caroussel === 2
+            })} />
+            <div className={classnames({
+              active: caroussel === 3
+            })} />
           </div>
 
           <div className="hero-body" />

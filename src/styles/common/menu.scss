@@ -23,8 +23,11 @@ $menu-animation-duration: .6s;
         opacity: 0;
 
         a {
+          @include mobile {
+            margin-bottom: 20px;
+          }
           display: block;
-          margin-bottom: 20px;
+          margin-bottom: 30px;
         }
       }
     }
@@ -33,7 +36,7 @@ $menu-animation-duration: .6s;
       margin-left: 20px;
       opacity: 0;
     }
-    .socials .column {
+    .socials-container .column {
       margin-left: 20px;
       opacity: 0;
     }
@@ -44,7 +47,7 @@ $menu-animation-duration: .6s;
     // -webkit-transform: scale($menu-show-scale);
     opacity: 1;
     transform: scale($menu-show-scale);
-    z-index: 100;
+    z-index: 1000;
 
     .hero {
 
@@ -73,7 +76,7 @@ $menu-animation-duration: .6s;
         @include animationfromright;
       }
 
-      .socials .column {
+      .socials-container .column {
         @for $i from 1 to 5 {
           &:nth-child(#{$i}) {
             animation: AnimationFromRight $menu-animation-duration ease 1;

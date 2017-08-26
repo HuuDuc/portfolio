@@ -1,0 +1,18 @@
+.developer {
+  height: 211px;
+  left: 50px;
+  position: fixed;
+  top: calc(50% - 211px / 2);
+  width: 20px;
+
+  margin-top: -20px;
+  opacity: 0;
+  z-index: 100;
+
+  &.show {
+    animation: AnimationFromBottom .8s ease 1;
+    animation-delay: 1.2s;
+    animation-fill-mode: forwards;
+    @include animationfrombottom;
+  }
+}
