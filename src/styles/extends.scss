@@ -6,3 +6,24 @@
   top: 0;
   width: 100%;
 }
+%hover-pink-line {
+  &:before {
+    @extend %before-after;
+    background-color: $color-pink;
+    display: block;
+    height: 6px;
+    top: calc(50% - 6px);
+    transition: width .2s;
+    width: 0;
+    z-index: -1;
+  }
+
+  @include desktop {
+    &:hover {
+      transition: width .2s;
+      &:before {
+        width: 100%;
+      }
+    }
+  }
+}

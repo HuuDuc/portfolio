@@ -9,6 +9,15 @@ $menu-icon-size-space: 11px;
     right: 22px;
     top: 20px;
   }
+  @include desktop {
+    &:hover {
+      &::before,
+      &::after,
+      > div {
+        background-color: $color-pink;
+      }
+    }
+  }
   animation: AnimationFromRight .6s ease 1;
   animation-delay: 1.5s;
   animation-fill-mode: forwards;

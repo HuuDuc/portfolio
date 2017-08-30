@@ -35,7 +35,7 @@ class Menu extends Component {
             <div className="container">
               <div className="columns">
                 <div
-                  className="main-content column is-3 is-offset-5"
+                  className="main-content column is-4 is-offset-4"
                 >
                   <ul>
                     <li className="is-uppercase">
@@ -43,28 +43,30 @@ class Menu extends Component {
                         onClick={() => router.push('/about')}
                         className="is-size-3 is-size-4-mobile"
                       >
-                        about
+                        about <span className="is-lighter">/ 關於我</span>
                       </a>
                     </li>
-                    <li className="is-uppercase">
-                      <a
-                        href="https://huuduc.github.io/react-fakeimg/"
-                        className="is-size-3 is-size-4-mobile"
-                      >
-                        react fakeimg
-                      </a>
-                    </li>
-                    <li className="is-uppercase">
-                      <a
-                        href="https://huuduc.github.io/react-fakeimg/"
-                        className="is-size-3 is-size-4-mobile"
-                      >
-                        chain validator
-                      </a>
-                    </li>
+                    {/*
+                      <li className="is-uppercase">
+                        <a
+                          href="https://huuduc.github.io/react-fakeimg/"
+                          className="is-size-3 is-size-4-mobile"
+                        >
+                          react fakeimg
+                        </a>
+                      </li>
+                      <li className="is-uppercase">
+                        <a
+                          href="https://huuduc.github.io/react-fakeimg/"
+                          className="is-size-3 is-size-4-mobile"
+                        >
+                          chain validator
+                        </a>
+                      </li>
+                    */}
                     <li className="is-uppercase">
                       <a className="is-size-3 is-size-4-mobile">
-                        contact
+                        contact <span className="is-lighter">/ 聯絡</span>
                       </a>
                     </li>
                   </ul>

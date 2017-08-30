@@ -4,64 +4,35 @@
       margin-top: 30px;
     }
   }
+  .paris,
   .taipei {
-    .img {
-      @include mobile {
-        height: 300px;
-      }
-      background-image: url('../assets/taipei.jpg');
-      background-position: center;
-      background-size: cover;
-      height: 500px;
-      width: 100%;
-    }
+    background-image: url('../assets/taipei.jpg');
+    background-position: center;
+    background-size: cover;
+    overflow: hidden;
 
     .description {
-      @include mobile {
-        margin-left: inherit;
-        margin-right: inherit;
-        margin-top: -80px;
+      width: 100%;
+      * {
+        color: $color-black;
       }
-      background-color: $color-white;
-      margin-left: 25px;
-      margin-right: 25px;
-      margin-top: -70px;
-      z-index: 100;
     }
+  }
+  .paris {
+    background-image: url('../assets/paris.jpg');
   }
 
   .numbers {
-
-    .columns {
-      margin-top: 40px;
-    }
-
-    .column {
-
-      &::after {
-        @extend %before-after;
-        display: none;
-      }
-
+    .is-paragraph {
       @include mobile {
-        margin-top: 15px;
-
-        &:last-child {
-          &::after {
-            display: none;
-          }
-        }
-
-        &::after {
-          background-color: $color-grey-60;
-          bottom: 0;
-          display: block;
-          height: 1px;
-          left: calc(50% - 15px);
-          top: inherit;
-          width: 30px;
-        }
+        margin-bottom: 20px;
       }
+    }
+    .columns {
+      @include mobile {
+        margin-top: 0;
+      }
+      margin-top: 40px;
     }
   }
 }

@@ -125,8 +125,10 @@ class About extends Component {
       .reveal('.intro h4', { origin: 'left', delay: 800, scale: 1 }, 500)
       .reveal('.intro .columns', { origin: 'right', delay: 800, scale: 1 }, 500)
       //.reveal('.biographies section', { delay: 800, scale: 1 }, 500)
-      .reveal('.taipei .img', { origin: 'left', delay: 500, scale: 1 }, 500)
-      .reveal('.taipei .description', { origin: 'right', delay: 500, scale: 1 }, 500)
+      .reveal('.paris', { origin: 'left', delay: 500, scale: 1 }, 500)
+      .reveal('.paris .hero-body', { origin: 'right', delay: 500, scale: 1 }, 500)
+      .reveal('.taipei', { origin: 'right', delay: 500, scale: 1 }, 500)
+      .reveal('.taipei .hero-body', { origin: 'left', delay: 500, scale: 1 }, 500)
       .reveal('.hero.numbers h3', { origin: 'left', delay: 500, scale: 1 }, 100)
       .reveal('.hero.numbers p.has-text-centered', { origin: 'right', delay: 500, scale: 1 }, 100)
       .reveal('.hero.numbers .columns .column', { delay: 500, scale: 1 }, 100)
@@ -202,7 +204,19 @@ class About extends Component {
 
         </section>
 
-        <section className="numbers hero">
+        <section className="hero is-fullheight paris">
+
+          <div className="hero-body">
+            <div className="has-text-centered description">
+              <h3 className="title is-3 is-size-4-mobile is-uppercase">paris, france</h3>
+              <h4 className="title is-4 is-size-5-mobile is-normal">法國巴黎</h4>
+              <p className="is-text">I come from the one of the most beautiful city in the world</p>
+            </div>
+          </div>
+
+        </section>
+
+        <section className="numbers hero is-fullheight is-light">
           <div className="hero-body">
             <div className="container">
               <h3 className="title is-3 is-size-4-mobile is-uppercase has-text-centered">few numbers</h3>
@@ -217,35 +231,44 @@ class About extends Component {
                   <p className="is-size-1">29</p>
                 </div>
                 <div className="is-pos-relative column has-text-centered">
-                  <p className="title is-5 is-size-6-mobile is-uppercase is-bold">experiences</p>
-                  <p className="subtitle is-6 is-size-7-mobile">經驗</p>
-                  <p className="is-size-1">10</p>
+                  <p className="title is-5 is-size-6-mobile is-uppercase is-bold">languages</p>
+                  <p className="subtitle is-6 is-size-7-mobile">語言能力</p>
+                  <p className="is-size-1">3</p>
                 </div>
                 <div className="is-pos-relative column has-text-centered">
                   <p className="title is-5 is-size-6-mobile is-uppercase is-bold">countries lived</p>
-                  <p className="subtitle is-6 is-size-7-mobile">國家居住</p>
+                  <p className="subtitle is-6 is-size-7-mobile">住過的國家</p>
                   <p className="is-size-1">2</p>
+                </div>
+              </div>
+            <div className="columns">
+              <div className="is-pos-relative column has-text-centered">
+                <p className="title is-5 is-size-6-mobile is-uppercase is-bold">experiences (year)</p>
+                <p className="subtitle is-6 is-size-7-mobile">經驗（年）</p>
+                <p className="is-size-1">9</p>
+              </div>
+                <div className="is-pos-relative column has-text-centered">
+                  <p className="title is-5 is-size-6-mobile is-uppercase is-bold">full stack dev. (year)</p>
+                  <p className="subtitle is-6 is-size-7-mobile">全端工程師（年）</p>
+                  <p className="is-size-1">6.5</p>
+                </div>
+                <div className="is-pos-relative column has-text-centered">
+                  <p className="title is-5 is-size-6-mobile is-uppercase is-bold">front-end dev. (year)</p>
+                  <p className="subtitle is-6 is-size-7-mobile">前端網頁工程師（年）</p>
+                  <p className="is-size-1">2.5</p>
                 </div>
               </div>
             </div>
           </div>
         </section>
 
-        <section className="hero is-light">
+        <section className="hero is-fullheight taipei">
 
           <div className="hero-body">
-            <div className="container taipei">
-              <div className="img" />
-              <section className="description section">
-                <h4 className="has-text-centered title is-3 is-size-4-mobile is-uppercase">taiwan</h4>
-                <h5 className="has-text-centered title is-4 is-size-5-mobile is-normal">台灣</h5>
-                <div className="has-text-centered has-text-centered has-text-left-mobile">
-                  <p
-                    className="is-paragraph"
-                    dangerouslySetInnerHTML={{ __html: 'Since July 2014, I left France to move to Taiwan. Taipei is becoming my home. <br/> So far, I love this place and I would like to stay for the rest of my life.' }}
-                  />
-                </div>
-              </section>
+            <div className="has-text-centered description">
+              <h3 className="title is-3 is-size-4-mobile is-uppercase">taipei, taiwan</h3>
+              <h4 className="title is-4 is-size-5-mobile is-normal">台灣台北</h4>
+              <p className="is-text">here it's where I am currently living</p>
             </div>
           </div>
 

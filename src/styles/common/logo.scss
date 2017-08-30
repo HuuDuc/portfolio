@@ -1,12 +1,13 @@
 .logo {
+  @extend %hover-pink-line;
   @include mobile {
     left: 22px;
     top: 22px;
   }
   @include desktop {
-    &:hover {
-      color: $color-white;
-    }
+    // &:hover {
+    //   color: $color-white;
+    // }
   }
   @include animationfromright;
   animation: AnimationFromLeft .6s ease 1;

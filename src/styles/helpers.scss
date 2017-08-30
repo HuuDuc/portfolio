@@ -5,6 +5,9 @@ $color-grey-80: lighten($color-black, 80%);
 $color-pink: #e3008c;
 $color-white: #fff;
 
+.is-lighter {
+  font-weight: lighter;
+}
 .is-normal {
   font-weight: normal;
 }

@@ -18,16 +18,27 @@ $menu-animation-duration: .6s;
     background-color: $color-black;
 
     ul {
+      margin-bottom: 50px;
       li {
+        margin-bottom: 30px;
         margin-left: 0;
         opacity: 0;
 
+        &:last-child {
+          margin-bottom: 0;
+        }
+
         a {
+          @extend %hover-pink-line;
           @include mobile {
             margin-bottom: 20px;
           }
-          display: block;
-          margin-bottom: 30px;
+          position: relative;
+
+          span {
+            letter-spacing: 3px;
+            color: $color-grey-60;
+          }
         }
       }
     }
