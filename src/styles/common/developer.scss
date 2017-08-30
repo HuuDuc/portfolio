@@ -1,13 +1,15 @@
 .developer {
-  height: 211px;
+  height: 242px;
   left: 50px;
   position: fixed;
   top: calc(50% - 211px / 2);
-  width: 20px;
+  width: auto;
 
   margin-top: -20px;
   opacity: 0;
   z-index: 100;
+
+  transform: rotate(-90deg) scale(1);
 
   &.show {
     animation: AnimationFromBottom .8s ease 1;

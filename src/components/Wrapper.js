@@ -29,10 +29,7 @@ class Wrapper extends Component {
         <MenuIcon onClick={this.onToggleMenu}  />
         <Logo show={show_menu} />
         <div className="developer show is-hidden-mobile">
-          <img
-            src={require('+/frontenddeveloper.png')}
-            alt="front-end developer"
-          />
+          <p className="is-uppercase is-bold">front-end developer</p>
         </div>
         <div className="socials show has-text-centered is-hidden-mobile">
           <p><a href="https://twitter.com/huuducweb"><Icon name="twitter"/></a></p>
