@@ -204,13 +204,61 @@ class About extends Component {
 
         </section>
 
+        <section className="hero is-fullheight">
+          <div className="tile is-ancestor">
+            <div className="tile is-vertical is-8">
+              <div className="tile">
+                <div className="tile is-parent is-vertical">
+                  <article className="tile is-child notification is-primary">
+                    <p className="title">Vertical...</p>
+                    <p className="subtitle">Top tile</p>
+                  </article>
+                  <article className="tile is-child notification is-warning">
+                    <p className="title">...tiles</p>
+                    <p className="subtitle">Bottom tile</p>
+                  </article>
+                </div>
+                <div className="tile is-parent">
+                  <article className="tile is-child notification is-info">
+                    <p className="title">Middle tile</p>
+                    <p className="subtitle">With an image</p>
+                    <figure className="image is-4by3">
+                      <img alt="test" src="http://bulma.io/images/placeholders/640x480.png" />
+                    </figure>
+                  </article>
+                </div>
+              </div>
+              <div className="tile is-parent">
+                <article className="tile is-child notification is-danger">
+                  <p className="title">Wide tile</p>
+                  <p className="subtitle">Aligned with the right tile</p>
+                  <div className="content">
+                    content
+                  </div>
+                </article>
+              </div>
+            </div>
+            <div className="tile is-parent">
+              <article className="tile is-child notification is-success">
+                <div className="content hero">
+                  <div className="hero-body">
+                    content
+                  </div>
+                </div>
+              </article>
+            </div>
+          </div>
+        </section>
+
         <section className="hero is-fullheight paris">
 
           <div className="hero-body">
             <div className="has-text-centered description">
               <h3 className="title is-3 is-size-4-mobile is-uppercase">paris, france</h3>
               <h4 className="title is-4 is-size-5-mobile is-normal">法國巴黎</h4>
-              <p className="is-text">I come from the one of the most beautiful city in the world</p>
+              <p className="is-paragraph">
+                {'I come from one of the most beautiful city in the world'}
+              </p>
             </div>
           </div>
 
@@ -268,7 +316,7 @@ class About extends Component {
             <div className="has-text-centered description">
               <h3 className="title is-3 is-size-4-mobile is-uppercase">taipei, taiwan</h3>
               <h4 className="title is-4 is-size-5-mobile is-normal">台灣台北</h4>
-              <p className="is-text">here it's where I am currently living</p>
+              <p className="is-paragraph">Here it's where I am currently living</p>
             </div>
           </div>
 
