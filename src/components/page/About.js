@@ -124,11 +124,17 @@ class About extends Component {
       .reveal('.intro h1', { origin: 'top', delay: 800, scale: 1 }, 500)
       .reveal('.intro h4', { origin: 'left', delay: 800, scale: 1 }, 500)
       .reveal('.intro .columns', { origin: 'right', delay: 800, scale: 1 }, 500)
-      //.reveal('.biographies section', { delay: 800, scale: 1 }, 500)
       .reveal('.paris', { origin: 'left', delay: 500, scale: 1 }, 500)
       .reveal('.paris .hero-body', { origin: 'right', delay: 500, scale: 1 }, 500)
       .reveal('.taipei', { origin: 'right', delay: 500, scale: 1 }, 500)
       .reveal('.taipei .hero-body', { origin: 'left', delay: 500, scale: 1 }, 500)
+
+
+      .reveal('.hero.whatcanido h3', { origin: 'left', delay: 500, scale: 1 }, 100)
+      .reveal('.hero.whatcanido p.has-text-centered', { origin: 'right', delay: 500, scale: 1 }, 100)
+      .reveal('.hero.whatcanido p.is-uppercase', { origin: 'left', delay: 500, scale: 1 }, 100)
+      .reveal('.hero.whatcanido .columns .column', { delay: 500, scale: 1 }, 100)
+
       .reveal('.hero.numbers h3', { origin: 'left', delay: 500, scale: 1 }, 100)
       .reveal('.hero.numbers p.has-text-centered', { origin: 'right', delay: 500, scale: 1 }, 100)
       .reveal('.hero.numbers .columns .column', { delay: 500, scale: 1 }, 100)
@@ -204,53 +210,54 @@ class About extends Component {
 
         </section>
 
-        <section className="hero is-fullheight">
-          <div className="tile is-ancestor">
-            <div className="tile is-vertical is-8">
-              <div className="tile">
-                <div className="tile is-parent is-vertical">
-                  <article className="tile is-child notification is-primary">
-                    <p className="title">Vertical...</p>
-                    <p className="subtitle">Top tile</p>
-                  </article>
-                  <article className="tile is-child notification is-warning">
-                    <p className="title">...tiles</p>
-                    <p className="subtitle">Bottom tile</p>
-                  </article>
-                </div>
-                <div className="tile is-parent">
-                  <article className="tile is-child notification is-info">
-                    <p className="title">Middle tile</p>
-                    <p className="subtitle">With an image</p>
-                    <figure className="image is-4by3">
-                      <img alt="test" src="http://bulma.io/images/placeholders/640x480.png" />
-                    </figure>
-                  </article>
+        <section className="hero is-fullheight whatcanido">
+
+          <div className="hero-body columns">
+            <div className="column">
+
+              <p className="has-text-centered">
+                <img alt="ampoule" src={require('+/ampoule.jpg')}/>
+              </p>
+
+              <h3 className="title is-3 is-uppercase has-text-centered">what can i do</h3>
+              <p className="is-paragraph has-text-centered">With almost 10 years experiences, I have gotten a lot of skills</p>
+
+
+              <div className="columns">
+                <div className="column has-text-centered has-text-left-mobile list">
+                  <p className="is-uppercase">
+                    <strong>virtualization / </strong>
+                    vagrant / virtualbox
+                  </p>
+                  <p className="is-uppercase">
+                    <strong>dabatase / </strong>
+                    postgresql / mysql / sqlserver
+                  </p>
+                  <p className="is-uppercase">
+                    <strong>front-end / </strong>
+                    rwd / html5 / css3 / scss / js / jquery / es6 / react / webpack / gulp
+                  </p>
+                  <p className="is-uppercase">
+                    <strong>back-end / </strong>
+                    php7 / symfony 2 / codeigniter / laravel / nodejs / express
+                  </p>
+                  <p className="is-uppercase">
+                    <strong>server / </strong>
+                    apache / nginx / ubuntu / debian
+                  </p>
                 </div>
               </div>
-              <div className="tile is-parent">
-                <article className="tile is-child notification is-danger">
-                  <p className="title">Wide tile</p>
-                  <p className="subtitle">Aligned with the right tile</p>
-                  <div className="content">
-                    content
-                  </div>
-                </article>
-              </div>
-            </div>
-            <div className="tile is-parent">
-              <article className="tile is-child notification is-success">
-                <div className="content hero">
-                  <div className="hero-body">
-                    content
-                  </div>
-                </div>
-              </article>
+
             </div>
           </div>
+
         </section>
 
         <section className="hero is-fullheight paris">
+
+          <div className="sentence is-hidden-mobile">
+            <p className="is-size-1 is-lighter is-vertical">我是法國人</p>
+          </div>
 
           <div className="hero-body">
             <div className="has-text-centered description">
@@ -264,9 +271,13 @@ class About extends Component {
 
         </section>
 
-        <section className="numbers hero is-fullheight is-light">
+        <section className="numbers hero is-fullheight">
           <div className="hero-body">
             <div className="container">
+
+              <p className="has-text-centered">
+                <img alt="ampoule" src={require('+/numbers.jpg')}/>
+              </p>
               <h3 className="title is-3 is-size-4-mobile is-uppercase has-text-centered">few numbers</h3>
               <p
                 className="has-text-centered is-paragraph"
@@ -274,36 +285,28 @@ class About extends Component {
               />
             <div className="columns">
                 <div className="is-pos-relative column has-text-centered">
-                  <p className="title is-5 is-size-6-mobile is-uppercase is-bold">age</p>
-                  <p className="subtitle is-6 is-size-7-mobile">年齡</p>
+                  <p className="title is-5 is-size-6-mobile is-uppercase is-bold">
+                    experiences (year)
+                    <br/>
+                    <span>經驗（年）</span>
+                  </p>
+                  <p className="is-size-1">9</p>
+                </div>
+                <div className="is-pos-relative column has-text-centered">
+                  <p className="title is-5 is-size-6-mobile is-uppercase is-bold">
+                    age
+                    <br/>
+                    <span>年齡</span>
+                  </p>
                   <p className="is-size-1">29</p>
                 </div>
                 <div className="is-pos-relative column has-text-centered">
-                  <p className="title is-5 is-size-6-mobile is-uppercase is-bold">languages</p>
-                  <p className="subtitle is-6 is-size-7-mobile">語言能力</p>
+                  <p className="title is-5 is-size-6-mobile is-uppercase is-bold">
+                    languages
+                    <br/>
+                    <span>語言能力</span>
+                  </p>
                   <p className="is-size-1">3</p>
-                </div>
-                <div className="is-pos-relative column has-text-centered">
-                  <p className="title is-5 is-size-6-mobile is-uppercase is-bold">countries lived</p>
-                  <p className="subtitle is-6 is-size-7-mobile">住過的國家</p>
-                  <p className="is-size-1">2</p>
-                </div>
-              </div>
-            <div className="columns">
-              <div className="is-pos-relative column has-text-centered">
-                <p className="title is-5 is-size-6-mobile is-uppercase is-bold">experiences (year)</p>
-                <p className="subtitle is-6 is-size-7-mobile">經驗（年）</p>
-                <p className="is-size-1">9</p>
-              </div>
-                <div className="is-pos-relative column has-text-centered">
-                  <p className="title is-5 is-size-6-mobile is-uppercase is-bold">full stack dev. (year)</p>
-                  <p className="subtitle is-6 is-size-7-mobile">全端工程師（年）</p>
-                  <p className="is-size-1">6.5</p>
-                </div>
-                <div className="is-pos-relative column has-text-centered">
-                  <p className="title is-5 is-size-6-mobile is-uppercase is-bold">front-end dev. (year)</p>
-                  <p className="subtitle is-6 is-size-7-mobile">前端網頁工程師（年）</p>
-                  <p className="is-size-1">2.5</p>
                 </div>
               </div>
             </div>
@@ -311,6 +314,10 @@ class About extends Component {
         </section>
 
         <section className="hero is-fullheight taipei">
+
+          <div className="sentence is-hidden-mobile">
+            <p className="is-size-1 is-lighter is-vertical">我愛台灣</p>
+          </div>
 
           <div className="hero-body">
             <div className="has-text-centered description">
