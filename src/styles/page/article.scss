@@ -1,8 +1,17 @@
 .article {
-  h5 {
-    margin-top: 40px;
-    &.first-child {
-      margin-top: 0;
+  .intro {
+    @include mobile {
+      padding-top: 50px;
+    }
+  }
+
+  .content {
+    padding-bottom: 50px;
+    h5 {
+      margin-top: 40px;
+      &:first-child {
+        margin-top: 0;
+      }
     }
   }
 }

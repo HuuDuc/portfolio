@@ -56,6 +56,7 @@ const router = () => {
           ].map(article => {
             return (
               <Route
+                key={article.slug}
                 path={`article/${article.slug}`}
                 pathnames={article.slug}
                 component={() => {

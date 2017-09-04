@@ -18,18 +18,16 @@ class Footer extends Component {
 
     return (
       <section className="hero is-dark footer">
-
-        <div className="hero-body">
           <div className="container">
-            <div className="columns">
+            <div className="columns is-gapless">
               <div className="column is-8">
                 <h5 className="title is-5 is-uppercase">what is it</h5>
                 <p className="is-paragraph">
                   {'Welcome to my portfolio. Enjoy and take your time.'}<br/>
-                  {'© 2017 Stephane Nguyen. Built with ReactJS and Bulma.io'}
+                  {'By Stéphane Nguyen. Built with ReactJS and Bulma.io'}
                 </p>
               </div>
-              <div className="column is-2 has-text-right menu">
+              <div className="column is-2 has-text-right menu is-hidden-mobile">
                 <h5 className="title is-5 is-uppercase">menu</h5>
                 <p className="is-paragraph is-uppercase">
                   <a onClick={()=> this.props.router.push('/')}>home</a>
@@ -44,7 +42,7 @@ class Footer extends Component {
                   <a onClick={()=> this.props.router.push('/contact')}>contact</a>
                 </p>
               </div>
-              <div className="column is-2 has-text-right">
+              <div className="column is-2 has-text-right has-text-left-mobile is-hidden-mobile">
                 <h5 className="title is-5 is-uppercase">follow me</h5>
                 <p className="is-paragraph social-content">
                   <a className="is-size-5 is-size-5-mobile" href="https://twitter.com/huuducweb"><Icon name="twitter"/></a>
@@ -55,7 +53,6 @@ class Footer extends Component {
               </div>
             </div>
           </div>
-        </div>
 
       </section>
     )

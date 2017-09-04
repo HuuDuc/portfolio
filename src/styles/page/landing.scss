@@ -82,9 +82,6 @@
       width: 500px;
       z-index: -1;
 
-      // margin-top: 20px;
-      // opacity: 0;
-
       @keyframes InitialAnimation {
         0% {background-position: 0% 50%}
         50% {background-position: 100% 50%}
@@ -97,13 +94,6 @@
         top: calc(50% - 99px);
         width: 250px;
       }
-
-      // &.show {
-      //   animation: InitialAnimation 4s ease infinite, AnimationFromTop $menu-animation-duration ease 1;
-      //   animation-delay: 1.2s;
-      //   animation-fill-mode: forwards;
-      //   @include animationfromtop;
-      // }
     }
 
     .middle-content {
@@ -144,6 +134,7 @@
 
       p {
         margin-bottom: 15px;
+
         &:last-child {
           margin-bottom: 0;
         }
@@ -151,9 +142,11 @@
     }
   }
   .blog {
+
     .hero-body {
       align-items: stretch;
     }
+
     .columns {
       margin-top: 50px;
 

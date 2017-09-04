@@ -4,7 +4,7 @@ import QueryString from 'query-string'
 import classnames from 'classnames'
 import ScrollReveal from 'scrollreveal'
 import FakeImg from 'react-fakeimg'
-
+import Footer from '@/common/Footer'
 
 import ScrollIcon from '@/common/ScrollIcon'
 import Loading from '@/Loading'
@@ -132,6 +132,8 @@ class Landing extends Component {
             </div>
           </div>
         </section>
+
+        <Footer router={this.context.router}/>
 
         <Loading show={loading} />
 
