@@ -1,0 +1,14 @@
+.footer {
+  .menu {
+    a {
+    }
+  }
+  .social-content {
+    a {
+      margin: 0 10px;
+      &:last-child {
+        margin-right: 0;
+      }
+    }
+  }
+}

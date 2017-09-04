@@ -3,7 +3,7 @@ import PropTypes from 'prop-types'
 import QueryString from 'query-string'
 import classnames from 'classnames'
 import ScrollReveal from 'scrollreveal'
-// import Particles from 'react-particles-js'
+import FakeImg from 'react-fakeimg'
 
 
 import ScrollIcon from '@/common/ScrollIcon'
@@ -63,7 +63,6 @@ class Landing extends Component {
 
   render() {
 
-    // const { router } = this.context
     const { loading, caroussel } = this.state
 
     return (
@@ -97,7 +96,6 @@ class Landing extends Component {
 
           <div className="hero-body" />
 
-          {/*
             <div className="hero-foot">
               <div
                 className="container is-pos-relative"
@@ -106,8 +104,33 @@ class Landing extends Component {
                 <ScrollIcon />
               </div>
             </div>
-          */}
 
+        </section>
+
+        <section className="hero is-fullheight blog">
+          <div className="hero-body">
+            <div className="container">
+              <h3 className="title is-3 is-uppercase has-text-centered">blog</h3>
+              <h5 className="title is-5 is-uppercase has-text-centered is-normal">博客</h5>
+              <p className="has-text-centered is-paragraph">I will try to keep writing and sharing things with all of you.</p>
+              <div className="columns is-multiline">
+                <div className="column is-4">
+                  <a
+                    onClick={()=> this.context.router.push('/article/bonjour')}
+                  >
+                    <FakeImg
+                      height={150}
+                      width={400}
+                      alt="color"
+                      bgColor="#e3008c"
+                      fontColor="#ffffff"
+                      text={'bonjour'.toUpperCase()}
+                    />
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
         </section>
 
         <Loading show={loading} />

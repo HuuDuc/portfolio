@@ -7,6 +7,9 @@ import Landing from './components/page/Landing'
 import About from './components/page/About'
 import Contact from './components/page/Contact'
 
+
+import Bonjour from './components/page/articles/Bonjour'
+
 import NotFound404 from './components/error/NotFound404'
 
 const router = () => {
@@ -44,6 +47,28 @@ const router = () => {
             )
           }}
         />
+        {
+          [
+            {
+              slug: 'bonjour',
+              component: Bonjour
+            }
+          ].map(article => {
+            return (
+              <Route
+                path={`article/${article.slug}`}
+                pathnames={article.slug}
+                component={() => {
+                  return (
+                    <Wrapper>
+                      {React.createElement(article.component)}
+                    </Wrapper>
+                  )
+                }}
+              />
+            )
+          })
+        }
       </Route>
       <Route path="*" component={NotFound404} />
     </Router>

@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import ScrollReveal from 'scrollreveal'
 import QueryString from 'query-string'
+import Icon from 'react-fa'
 
 import Loading from '@/Loading'
 
@@ -67,10 +68,14 @@ class Contact extends Component {
                 <div className="column is-half is-offset-one-quarter">
                   <p className="is-paragraph has-text-centered">
                     {'You would like to contact me ? Feel free to send me an email.'}
-                    <br/><br/>{'Currently opening for new opportunities'}
-                  </p>
-                  <p>
+                    <br/>{'Currently opening for new opportunities'}
+                    <br/><br/>
                     <a className="is-size-5 is-size-5-mobile is-uppercase" onClick={this.mailTo}>email me</a>
+                  </p>
+                  <p className="link-socials has-text-centered is-hidden-tablet is-hidden-desktop">
+                    <a className="is-size-5 is-size-5-mobile" href="https://twitter.com/huuducweb"><Icon name="twitter"/></a>
+                    <a className="is-size-5 is-size-5-mobile" href="http://www.linkedin.com/in/stephanehuuducnguyen"><Icon name="linkedin"/></a>
+                    <a className="is-size-5 is-size-5-mobile" href="https://github.com/HuuDuc"><Icon name="github"/></a>
                   </p>
                 </div>
               </div>

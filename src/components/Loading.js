@@ -26,6 +26,10 @@ class Loading extends Component {
     }
   }
 
+  componentDidMount() {
+    window.scrollTo(0, 0)
+  }
+
   hide = () => {
     this.setState({ hide: true })
   }

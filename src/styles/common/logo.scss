@@ -4,11 +4,11 @@
     left: 22px;
     top: 22px;
   }
-  @include desktop {
-    // &:hover {
-    //   color: $color-white;
-    // }
-  }
+  // @include desktop {
+  // &:hover {
+  //   color: $color-white;
+  // }
+  // }
   @include animationfromright;
   animation: AnimationFromLeft .6s ease 1;
   animation-delay: 1.5s;
