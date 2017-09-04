@@ -5,7 +5,6 @@ import Wrapper from '@/Wrapper'
 
 import Landing from './components/page/Landing'
 import About from './components/page/About'
-// import Project from './components/page/Project'
 import Contact from './components/page/Contact'
 
 import NotFound404 from './components/error/NotFound404'
@@ -34,8 +33,17 @@ const router = () => {
             )
           }}
         />
-        {/* <Route path="projects" pathnames="projects" component={Project} /> */}
-        <Route path="contact" pathnames="contact" component={Contact} />
+        <Route
+          path="contact"
+          pathnames="contact"
+          component={() => {
+            return (
+              <Wrapper>
+                <Contact />
+              </Wrapper>
+            )
+          }}
+        />
       </Route>
       <Route path="*" component={NotFound404} />
     </Router>

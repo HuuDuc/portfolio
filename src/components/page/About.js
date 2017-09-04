@@ -1,16 +1,10 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import ScrollReveal from 'scrollreveal'
-// import Icon from 'react-fa'
-// import classnames from 'classnames'
-
-// import Nav from './partial/Nav'
-
-// import Particles from 'react-particles-js'
 
 import Loading from '@/Loading'
 import ScrollIcon from '@/common/ScrollIcon'
-import Footer from '@/partial/Footer'
+// import Footer from '@/partial/Footer'
 
 class About extends Component {
 
@@ -110,7 +104,7 @@ class About extends Component {
   }
 
   componentWillMount() {
-    document.title = 'About | Stéphane Nguyen'
+    document.title = 'ABOUT 關於我 | Stéphane Nguyen'
   }
 
   componentDidMount() {
@@ -225,25 +219,29 @@ class About extends Component {
 
               <div className="columns">
                 <div className="column has-text-centered has-text-left-mobile list">
-                  <p className="is-uppercase">
+                  <p className="is-uppercase is-size-7-mobile">
                     <strong>virtualization / </strong>
                     vagrant / virtualbox
                   </p>
-                  <p className="is-uppercase">
+                  <p className="is-uppercase is-size-7-mobile">
                     <strong>dabatase / </strong>
                     postgresql / mysql / sqlserver
                   </p>
-                  <p className="is-uppercase">
+                  <p className="is-uppercase is-size-7-mobile">
                     <strong>front-end / </strong>
                     rwd / html5 / css3 / scss / js / jquery / es6 / react / webpack / gulp
                   </p>
-                  <p className="is-uppercase">
+                  <p className="is-uppercase is-size-7-mobile">
                     <strong>back-end / </strong>
                     php7 / symfony 2 / codeigniter / laravel / nodejs / express
                   </p>
-                  <p className="is-uppercase">
+                  <p className="is-uppercase is-size-7-mobile">
                     <strong>server / </strong>
                     apache / nginx / ubuntu / debian
+                  </p>
+                  <p className="is-uppercase is-size-7-mobile">
+                    <strong>version control / </strong>
+                    git / svn
                   </p>
                 </div>
               </div>
@@ -253,23 +251,50 @@ class About extends Component {
 
         </section>
 
-        <section className="hero is-fullheight paris">
+        <section className="hero is-fullheight countries">
 
-          <div className="sentence is-hidden-mobile">
-            <p className="is-size-1 is-lighter is-vertical">我是法國人</p>
-          </div>
-
-          <div className="hero-body">
-            <div className="has-text-centered description">
-              <h3 className="title is-3 is-size-4-mobile is-uppercase">paris, france</h3>
-              <h4 className="title is-4 is-size-5-mobile is-normal">法國巴黎</h4>
-              <p className="is-paragraph">
-                {'I come from one of the most beautiful city in the world'}
-              </p>
+          <div className="content">
+            <div className="container">
+              <div className="columns">
+                <div className="column paris is-flex-center-column">
+                  <div className="has-text-centered">
+                    <h3 className="title is-3 is-uppercase">paris, france</h3>
+                    <h5 className="title is-5 is-uppercase">法國巴黎</h5>
+                    <p className="is-paragraph">{'where I was born and I come from'}</p>
+                  </div>
+                </div>
+                <div className="column taipei is-flex-center-column">
+                  <div className="has-text-centered">
+                    <h3 className="title is-3 is-uppercase">taipei, taiwan</h3>
+                    <h5 className="title is-5 is-uppercase">臺灣臺北</h5>
+                    <p className="is-paragraph">{'where I am currently living'}</p>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
 
         </section>
+
+        {/*
+          <section className="hero is-fullheight paris">
+
+            <div className="sentence is-hidden-mobile">
+              <p className="is-size-1 is-lighter is-vertical">我是法國人</p>
+            </div>
+
+            <div className="hero-body">
+              <div className="has-text-centered description">
+                <h3 className="title is-3 is-size-4-mobile is-uppercase">paris, france</h3>
+                <h4 className="title is-4 is-size-5-mobile is-normal">法國巴黎</h4>
+                <p className="is-paragraph">
+                  {'I come from one of the most beautiful city in the world'}
+                </p>
+              </div>
+            </div>
+
+          </section>
+        */}
 
         <section className="numbers hero is-fullheight">
           <div className="hero-body">
@@ -313,29 +338,23 @@ class About extends Component {
           </div>
         </section>
 
-        <section className="hero is-fullheight taipei">
+        {/*
+          <section className="hero is-fullheight taipei">
 
-          <div className="sentence is-hidden-mobile">
-            <p className="is-size-1 is-lighter is-vertical">我愛台灣</p>
-          </div>
-
-          <div className="hero-body">
-            <div className="has-text-centered description">
-              <h3 className="title is-3 is-size-4-mobile is-uppercase">taipei, taiwan</h3>
-              <h4 className="title is-4 is-size-5-mobile is-normal">台灣台北</h4>
-              <p className="is-paragraph">Here it's where I am currently living</p>
+            <div className="sentence is-hidden-mobile">
+              <p className="is-size-1 is-lighter is-vertical">我愛台灣</p>
             </div>
-          </div>
 
-        </section>
-
-        <section className="hero is-fullheight is-primary">
-          <div className="hero-body">
-            <div className="container">
-              test
+            <div className="hero-body">
+              <div className="has-text-centered description">
+                <h3 className="title is-3 is-size-4-mobile is-uppercase">taipei, taiwan</h3>
+                <h4 className="title is-4 is-size-5-mobile is-normal">台灣台北</h4>
+                <p className="is-paragraph">Here it's where I am currently living</p>
+              </div>
             </div>
-          </div>
-        </section>
+
+          </section>
+        */}
 
         {/*
           <section className="hero is-light">
@@ -364,7 +383,7 @@ class About extends Component {
           </section>
         */}
 
-        <Footer />
+        {/* <Footer /> */}
 
         <Loading show={loading} />
 

@@ -65,7 +65,10 @@ class Menu extends Component {
                       </li>
                     */}
                     <li className="is-uppercase">
-                      <a className="is-size-3 is-size-4-mobile">
+                      <a
+                        onClick={() => router.push('/contact')}
+                        className="is-size-3 is-size-4-mobile"
+                      >
                         contact <span className="is-lighter">/ 聯絡</span>
                       </a>
                     </li>

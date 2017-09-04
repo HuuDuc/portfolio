@@ -4,51 +4,51 @@
       margin-top: 30px;
     }
   }
-  .paris,
-  .taipei {
-    background-image: url('../assets/taipei.jpg');
-    background-position: center;
-    background-size: cover;
-    position: relative;
-    overflow: hidden;
-
-    .description {
-      width: 100%;
-      * {
-        color: $color-black;
-      }
-    }
-  }
-  .taipei {
-    @include mobile {
-      background-position: 55% center;
-    }
-    .sentence {
-      left: 200px;
-      position: absolute;
-      top: 200px;
-      color: $color-pink;
-    }
-  }
-  .paris {
-    @include mobile {
-      background-position: 20% center;
-    }
-    background-image: url('../assets/paris.jpg');
-    .sentence {
-      right: 300px;
-      position: absolute;
-      top: 200px;
-      color: $color-pink;
-    }
-  }
+  // .paris,
+  // .taipei {
+  //   background-image: url('../assets/taipei.jpg');
+  //   background-position: center;
+  //   background-size: cover;
+  //   position: relative;
+  //   overflow: hidden;
+  //
+  //   .description {
+  //     width: 100%;
+  //     * {
+  //       color: $color-black;
+  //     }
+  //   }
+  // }
+  // .taipei {
+  //   @include mobile {
+  //     background-position: 55% center;
+  //   }
+  //   .sentence {
+  //     left: 200px;
+  //     position: absolute;
+  //     top: 200px;
+  //     color: $color-pink;
+  //   }
+  // }
+  // .paris {
+  //   @include mobile {
+  //     background-position: 20% center;
+  //   }
+  //   background-image: url('../assets/paris.jpg');
+  //   .sentence {
+  //     right: 300px;
+  //     position: absolute;
+  //     top: 200px;
+  //     color: $color-pink;
+  //   }
+  // }
 
   .numbers {
     img {
       @include mobile {
-        max-width: 200px;
+        max-width: 150px;
       }
-      max-width: 300px;
+      max-width: 250px;
     }
     .is-paragraph {
       @include mobile {
@@ -73,14 +73,95 @@
   .whatcanido {
     img {
       @include mobile {
-        max-width: 200px;
+        max-width: 150px;
       }
-      max-width: 300px;
+      max-width: 250px;
+      margin-bottom: 20px;
     }
     .list {
       margin-top: 30px;
       p {
         margin-top: 20px;
+      }
+    }
+  }
+  .countries {
+    position: relative;
+    .content {
+      height: 100%;
+      left: 0;
+      position: absolute;
+      top: 0;
+      width: 100%;
+
+      .container {
+        height: 100%;
+
+        .columns {
+          @include mobile {
+            height: 100%;
+            padding: 0;
+          }
+          height: calc(100% - 40px);
+          padding: 20px 0;
+
+          .column {
+            @include mobile {
+              height: 50%;
+            }
+            height: 100%;
+            overflow: hidden;
+            position: relative;
+
+            &::before {
+              @include desktop {
+                transform: scale(1.05);
+                transition: transform .4s;
+              }
+              @extend %before-after;
+              z-index: -1;
+            }
+
+            &.paris {
+              &::before {
+                @include mobile {
+                  background-size: cover;
+                  background-position: center;
+                }
+                background-image: url('../assets/paris.jpg');
+                background-position: -230px center;
+              }
+            }
+            &.taipei {
+              &::before {
+                @include mobile {
+                  background-size: cover;
+                  background-position: center;
+                }
+                background-image: url('../assets/taipei.jpg');
+                background-position: -660px center;
+              }
+            }
+
+            &:hover {
+              &::before {
+                transform: scale(1);
+              }
+              > div {
+                opacity: 1;
+                transform: scale(1);
+              }
+            }
+
+            > div {
+              @include desktop {
+                opacity: 0;
+                transform: scale(0.9);
+                transition: transform .4s, opacity .4s;
+              }
+            }
+          }
+        }
       }
     }
   }

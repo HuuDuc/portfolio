@@ -20,7 +20,7 @@ class Landing extends Component {
   }
 
   componentWillMount() {
-    document.title = 'Portfolio | Stéphane Nguyen'
+    document.title = 'PORTFOLIO 投資組合 | Stéphane Nguyen'
   }
 
   componentDidMount() {
@@ -97,19 +97,16 @@ class Landing extends Component {
 
           <div className="hero-body" />
 
-          <div className="hero-foot">
-            <div
-              className="container is-pos-relative"
-              style={{ height: '50px', marginBottom: '40px' }}
-            >
-              <ScrollIcon />
+          {/*
+            <div className="hero-foot">
+              <div
+                className="container is-pos-relative"
+                style={{ height: '50px', marginBottom: '40px' }}
+              >
+                <ScrollIcon />
+              </div>
             </div>
-          </div>
-
-        </section>
-        <section className="hero is-fullheight is-primary">
-
-          <div className="hero-body">landing page</div>
+          */}
 
         </section>
 
