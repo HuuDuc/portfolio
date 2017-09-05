@@ -1,11 +1,20 @@
 .footer {
+  .is-paragraph {
+    font-weight: lighter;
+  }
+
   .menu {
     a {
+      font-family: 'Noto Sans TC', 'Microsoft Yahei', '微軟正黑體', sans-serif;
+      font-weight: lighter;
     }
   }
+
   .social-content {
+
     a {
       margin: 0 10px;
+
       &:last-child {
         margin-right: 0;
       }

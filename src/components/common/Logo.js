@@ -19,7 +19,7 @@ class Logo extends Component {
           logo: true,
           'is-uppercase': true,
           title: true,
-          'is-3': true,
+          'is-2': true,
           'is-size-4-mobile': true,
           'is-pointer': true,
           show

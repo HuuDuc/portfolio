@@ -36,20 +36,42 @@ $menu-animation-duration: .6s;
           position: relative;
 
           span {
-            letter-spacing: 3px;
             color: $color-grey-60;
+            letter-spacing: 4px;
           }
         }
       }
     }
 
-    p.is-separation {
-      margin-left: 20px;
-      opacity: 0;
+    p {
+      &.is-separation {
+        margin-left: 20px;
+        opacity: 0;
+      }
     }
-    .socials-container .column {
-      margin-left: 20px;
-      opacity: 0;
+
+    .socials-container {
+      .column {
+
+        margin-left: 20px;
+        opacity: 0;
+      }
+    }
+
+    .hero-foot {
+
+      .socials-container {
+        padding-bottom: 20px;
+        padding-left: 20px;
+        width: 1000px;
+
+        a {
+          display: inline-block;
+          margin-left: 20px;
+          margin-right: 50px;
+          opacity: 0;
+        }
+      }
     }
   }
 
@@ -88,6 +110,16 @@ $menu-animation-duration: .6s;
       }
 
       .socials-container .column {
+        @for $i from 1 to 5 {
+          &:nth-child(#{$i}) {
+            animation: AnimationFromRight $menu-animation-duration ease 1;
+            animation-delay: (5 * $menu-animation-delay) + ($i * $menu-animation-delay);
+            animation-fill-mode: forwards;
+            @include animationfromright;
+          }
+        }
+      }
+      .hero-foot .socials-container a {
         @for $i from 1 to 5 {
           &:nth-child(#{$i}) {
             animation: AnimationFromRight $menu-animation-duration ease 1;

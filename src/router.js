@@ -6,6 +6,7 @@ import Wrapper from '@/Wrapper'
 import Landing from './components/page/Landing'
 import About from './components/page/About'
 import Contact from './components/page/Contact'
+import Blog from './components/page/Blog'
 
 
 import Bonjour from './components/page/articles/Bonjour'
@@ -32,6 +33,17 @@ const router = () => {
             return (
               <Wrapper>
                 <About />
+              </Wrapper>
+            )
+          }}
+        />
+        <Route
+          path="blog"
+          pathnames="blog"
+          component={() => {
+            return (
+              <Wrapper>
+                <Blog />
               </Wrapper>
             )
           }}

@@ -32,64 +32,39 @@ class Menu extends Component {
       })}>
         <section className="hero is-fullheight is-dark">
           <div className="hero-body">
-            <div className="container">
+            <div className="container is-fluid">
               <div className="columns">
                 <div
-                  className="main-content column is-4 is-offset-4"
+                  className="main-content column is-4"
                 >
                   <ul>
                     <li className="is-uppercase">
                       <a
                         onClick={() => router.push('/about')}
-                        className="is-size-3 is-size-4-mobile"
+                        className="is-size-1 is-size-4-mobile"
                       >
                         about <span className="is-lighter">/ 關於我</span>
                       </a>
                     </li>
-                    {/*
-                      <li className="is-uppercase">
-                        <a
-                          href="https://huuduc.github.io/react-fakeimg/"
-                          className="is-size-3 is-size-4-mobile"
-                        >
-                          react fakeimg
-                        </a>
-                      </li>
-                      <li className="is-uppercase">
-                        <a
-                          href="https://huuduc.github.io/react-fakeimg/"
-                          className="is-size-3 is-size-4-mobile"
-                        >
-                          chain validator
-                        </a>
-                      </li>
-                    */}
+                    <li className="is-uppercase">
+                      <a
+                        onClick={() => router.push('/blog')}
+                        className="is-size-1 is-size-4-mobile"
+                      >
+                        blog <span className="is-lighter">/ 博客</span>
+                      </a>
+                    </li>
                     <li className="is-uppercase">
                       <a
                         onClick={() => router.push('/contact')}
-                        className="is-size-3 is-size-4-mobile"
+                        className="is-size-1 is-size-4-mobile"
                       >
                         contact <span className="is-lighter">/ 聯絡</span>
                       </a>
                     </li>
                   </ul>
 
-                  <p className="no-letter-spacing is-separation">{String.fromCharCode(8212).repeat(5)}</p>
-
-                  <div className="socials-container columns is-hidden-mobile">
-                    <div className="column is-2">
-                      <a className="is-size-5 is-size-5-mobile" href="https://twitter.com/huuducweb"><Icon name="twitter"/></a>
-                    </div>
-                    <div className="column is-2">
-                      <a className="is-size-5 is-size-5-mobile" href="http://www.linkedin.com/in/stephanehuuducnguyen"><Icon name="linkedin"/></a>
-                    </div>
-                    <div className="column is-2">
-                      <a className="is-size-5 is-size-5-mobile" href="https://github.com/HuuDuc"><Icon name="github"/></a>
-                    </div>
-                    <div className="column is-2">
-                      <a className="is-size-5 is-size-5-mobile" onClick={this.mailTo}><Icon name="paper-plane"/></a>
-                    </div>
-                  </div>
+                  <p className="is-hidden-desktop is-hidden-widescreen no-letter-spacing is-separation">{String.fromCharCode(8212).repeat(5)}</p>
 
                   <div className="socials-container columns is-mobile is-hidden-desktop is-hidden-tablet is-hidden-widescreen">
                     <div className="column is-2">
@@ -109,6 +84,23 @@ class Menu extends Component {
                 </div>
               </div>
             </div>
+          </div>
+          <div className="hero-foot is-hidden-mobile">
+
+            <div className="container is-fluid">
+
+              <div className="columns is-gapless">
+                <div className="column">
+                  <div className="socials-container is-gapless is-hidden-mobile">
+                    <a className="is-size-3" href="https://twitter.com/huuducweb"><Icon name="twitter"/></a>
+                    <a className="is-size-3" href="http://www.linkedin.com/in/stephanehuuducnguyen"><Icon name="linkedin"/></a>
+                    <a className="is-size-3" href="https://github.com/HuuDuc"><Icon name="github"/></a>
+                    <a className="is-size-3" onClick={this.mailTo}><Icon name="paper-plane"/></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
           </div>
         </section>
       </div>
