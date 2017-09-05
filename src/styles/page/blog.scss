@@ -1,0 +1,14 @@
+// .blog-page {
+//
+// }
+
+.list-articles {
+  p {
+    &.is-paragraph {
+      margin-bottom: 20px;
+    }
+  }
+  .has-text-right a {
+    @extend %hover-pink-line;
+  }
+}

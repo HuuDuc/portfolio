@@ -3,10 +3,11 @@
   @include mobile {
     left: 22px;
     top: 22px;
+    margin-top: 5px;
   }
   @include desktop {
     transition: color .4s;
-    
+
     &:hover {
       color: $color-pink;
     }

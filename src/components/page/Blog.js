@@ -1,10 +1,10 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import ScrollReveal from 'scrollreveal'
-import ScrollIcon from '@/common/ScrollIcon'
-import Icon from 'react-fa'
 
 import Loading from '@/Loading'
+import Footer from '@/common/Footer'
+import ScrollIcon from '@/common/ScrollIcon'
 
 class Blog extends Component {
 
@@ -64,7 +64,7 @@ class Blog extends Component {
 
         <section className="section">
           <div className="container">
-            <div className="columns is-multiline">
+            <div className="columns is-multiline list-articles">
 
               <div className="column is-4">
                 <a href="" style={{ display: 'block' }}>
@@ -76,44 +76,16 @@ class Blog extends Component {
                 <p className="is-paragraph">
                   {'small description of the article. Just to mock and see how it looks like. so let\'s try'}
                 </p>
-              </div>
-              <div className="column is-4">
-                <a href="" style={{ display: 'block' }}>
-                  <img src="http://fakeimg.pl/300x150/" alt="test" style={{ width: '100%' }}/>
-                </a>
-                <h4 className="title is-4 is-uppercase">
-                  test article title
-                </h4>
-                <p className="is-paragraph">
-                  {'small description of the article. Just to mock and see how it looks like. so let\'s try'}
-                </p>
-              </div>
-              <div className="column is-4">
-                <a href="" style={{ display: 'block' }}>
-                  <img src="http://fakeimg.pl/300x150/" alt="test" style={{ width: '100%' }}/>
-                </a>
-                <h4 className="title is-4 is-uppercase">
-                  test article title
-                </h4>
-                <p className="is-paragraph">
-                  {'small description of the article. Just to mock and see how it looks like. so let\'s try'}
-                </p>
-              </div>
-              <div className="column is-4">
-                <a href="" style={{ display: 'block' }}>
-                  <img src="http://fakeimg.pl/300x150/" alt="test" style={{ width: '100%' }}/>
-                </a>
-                <h4 className="title is-4 is-uppercase">
-                  test article title
-                </h4>
-                <p className="is-paragraph">
-                  {'small description of the article. Just to mock and see how it looks like. so let\'s try'}
+                <p className="has-text-right">
+                  <a className="is-uppercase">read more</a>
                 </p>
               </div>
 
             </div>
           </div>
         </section>
+
+        <Footer router={this.context.router} />
 
         <Loading show={loading} />
       </div>
