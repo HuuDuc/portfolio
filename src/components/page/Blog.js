@@ -39,7 +39,7 @@ class Blog extends Component {
 
     return (
       <div className="blog-page">
-        <section className="intro hero is-large">
+        <section className="intro hero is-fullheight">
           <div className="hero-body">
             <div className="container">
               <h1 className="has-text-centered title is-1 is-size-2-mobile is-uppercase">
@@ -67,17 +67,26 @@ class Blog extends Component {
             <div className="columns is-multiline list-articles">
 
               <div className="column is-4">
-                <a href="" style={{ display: 'block' }}>
-                  <img src="http://fakeimg.pl/300x150/" alt="test" style={{ width: '100%' }}/>
+                <a
+                  className="image"
+                  onClick={() => this.context.router.push('/article/bonjour')}
+                >
+                  <img
+                    src={require('+/articles/bonjour.jpg')}
+                    alt="bonjour"
+                    style={{ width: '100%' }}
+                  />
                 </a>
-                <h4 className="title is-4 is-uppercase">
-                  test article title
-                </h4>
-                <p className="is-paragraph">
-                  {'small description of the article. Just to mock and see how it looks like. so let\'s try'}
-                </p>
+                <h5 className="title is-5 is-uppercase">
+                  bonjour <span>你好</span>
+                </h5>
                 <p className="has-text-right">
-                  <a className="is-uppercase">read more</a>
+                  <a
+                    className="is-uppercase"
+                    onClick={() => this.context.router.push('/article/bonjour')}
+                  >
+                    read more
+                  </a>
                 </p>
               </div>
 

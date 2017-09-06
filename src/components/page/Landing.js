@@ -96,39 +96,54 @@ class Landing extends Component {
 
           <div className="hero-body" />
 
-            <div className="hero-foot">
-              <div
-                className="container is-pos-relative"
-                style={{ height: '50px', marginBottom: '40px' }}
-              >
-                <ScrollIcon />
-              </div>
+          <p className="paragraph is-size-2 is-size-5-mobile is-uppercase">
+            {'love fine design. enjoy working on artistic projects.'}
+          </p>
+
+          <div className="hero-foot">
+            <div
+              className="container is-pos-relative"
+              style={{ height: '50px', marginBottom: '40px' }}
+            >
+              <ScrollIcon />
             </div>
+          </div>
 
         </section>
 
-        <section className="hero is-fullheight blog">
-          <div className="hero-body">
-            <div className="container">
-              <h3 className="title is-3 is-uppercase has-text-centered">blog</h3>
-              <h5 className="title is-5 is-uppercase has-text-centered is-normal">博客</h5>
-              <p className="has-text-centered is-paragraph">I will try to keep writing and sharing things with all of you.</p>
-              <div className="columns is-multiline">
-                <div className="column is-4">
+        <section className="section">
+          <div className="container">
+
+            <h3 className="title is-3 is-uppercase has-text-centered">blog</h3>
+            <h5 className="title is-5 is-uppercase has-text-centered is-normal">博客</h5>
+            <p className="has-text-centered is-paragraph">I will try to keep writing and sharing things with all of you.</p>
+
+            <div className="columns is-multiline list-articles" style={{ marginTop: '50px' }}>
+
+              <div className="column is-4">
+                <a
+                  style={{ display: 'block' }}
+                  onClick={() => this.context.router.push('/article/bonjour')}
+                >
+                  <img
+                    src={require('+/articles/bonjour.jpg')}
+                    alt="bonjour"
+                    style={{ width: '100%' }}
+                  />
+                </a>
+                <h5 className="title is-5 is-uppercase">
+                  bonjour <span>你好</span>
+                </h5>
+                <p className="has-text-right">
                   <a
-                    onClick={()=> this.context.router.push('/article/bonjour')}
+                    className="is-uppercase"
+                    onClick={() => this.context.router.push('/article/bonjour')}
                   >
-                    <FakeImg
-                      height={150}
-                      width={400}
-                      alt="color"
-                      bgColor="#e3008c"
-                      fontColor="#ffffff"
-                      text={'bonjour'.toUpperCase()}
-                    />
+                    read more
                   </a>
-                </div>
+                </p>
               </div>
+
             </div>
           </div>
         </section>

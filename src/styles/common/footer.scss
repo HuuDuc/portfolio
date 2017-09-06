@@ -1,12 +1,12 @@
 .footer {
+  background-color: $color-black !important;
   .is-paragraph {
-    font-weight: lighter;
+    color: $color-white;
   }
 
   .menu {
     a {
       font-family: 'Noto Sans TC', 'Microsoft Yahei', '微軟正黑體', sans-serif;
-      font-weight: lighter;
     }
   }
 
@@ -17,6 +17,14 @@
 
       &:last-child {
         margin-right: 0;
+      }
+    }
+  }
+
+  .column.is-8 {
+    .is-paragraph {
+      &:last-child {
+        margin-top: 20px;
       }
     }
   }

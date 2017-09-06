@@ -2,6 +2,18 @@
   section {
     &.first {
       position: relative;
+
+      .paragraph {
+        @include mobile {
+          left: calc(50% - 120px);
+          width: 240px;
+        }
+        bottom: 100px;
+        left: calc(50% - 225px);
+        position: absolute;
+        width: 450px;
+        z-index: 20;
+      }
     }
 
     .caroussel {
@@ -37,10 +49,9 @@
         }
 
         &.show {
-          animation: AnimationCaroussel 5s ease 1;
-          // animation-delay: s;
-          animation-fill-mode: forwards;
           @include animationcaroussel;
+          animation: AnimationCaroussel 5s ease 1;
+          animation-fill-mode: forwards;
         }
       }
     }

@@ -22,6 +22,10 @@ class Bonjour extends Component {
   componentDidMount() {
     this.setState({ loading: false })
     this.animation()
+
+    // document.addEventListener('scroll', scroll => {
+    //   // window.scrollY
+    // })
   }
 
   animation = () => {
@@ -38,7 +42,14 @@ class Bonjour extends Component {
     return (
       <div className="article">
 
-        <section className="intro hero is-medium">
+        <section
+          className="intro hero is-large"
+          style={{
+            backgroundImage: `url(${require('+/articles/bonjour.jpg')})`,
+            backgroundSize: 'cover',
+            backgroundPosition: 'center'
+          }}
+        >
           <div className="hero-body">
             <div className="container">
               <h1 className="has-text-centered title is-1 is-size-2-mobile is-uppercase">
