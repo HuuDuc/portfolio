@@ -35,13 +35,13 @@ class Menu extends Component {
             <div className="container is-fluid">
               <div className="columns">
                 <div
-                  className="main-content column is-4"
+                  className="main-content column"
                 >
                   <ul>
                     <li className="is-uppercase">
                       <a
                         onClick={() => router.push('/about')}
-                        className="is-size-1 is-size-4-mobile"
+                        className="is-size-2 is-size-4-mobile"
                       >
                         about <span className="is-lighter">/ 關於我</span>
                       </a>
@@ -49,7 +49,7 @@ class Menu extends Component {
                     <li className="is-uppercase">
                       <a
                         onClick={() => router.push('/blog')}
-                        className="is-size-1 is-size-4-mobile"
+                        className="is-size-2 is-size-4-mobile"
                       >
                         blog <span className="is-lighter">/ 博客</span>
                       </a>
@@ -57,7 +57,7 @@ class Menu extends Component {
                     <li className="is-uppercase">
                       <a
                         onClick={() => router.push('/contact')}
-                        className="is-size-1 is-size-4-mobile"
+                        className="is-size-2 is-size-4-mobile"
                       >
                         contact <span className="is-lighter">/ 聯絡</span>
                       </a>

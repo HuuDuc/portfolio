@@ -12,13 +12,16 @@ $menu-animation-duration: .6s;
   transform: scale($menu-hide-scale);
   transition: transform .15s, opacity .15s;
   width: 100%;
-  z-index: 0;
+  z-index: -100;
+  display: none;
 
   .hero {
     background-color: $color-black;
 
     ul {
-      margin-bottom: 50px;
+      @include mobile {
+        margin-bottom: 50px;
+      }
       li {
         margin-bottom: 30px;
         margin-left: 0;
@@ -78,6 +81,7 @@ $menu-animation-duration: .6s;
   &.show {
     // -ms-transform: scale($menu-show-scale);
     // -webkit-transform: scale($menu-show-scale);
+    display: block;
     opacity: 1;
     transform: scale($menu-show-scale);
     z-index: 1000;
