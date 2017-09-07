@@ -6,6 +6,8 @@ import Loading from '@/Loading'
 import ScrollIcon from '@/common/ScrollIcon'
 import Footer from '@/common/Footer'
 
+const instaFeeds = require('+/data/insta.json')
+
 class About extends Component {
 
   constructor(props) {
@@ -49,6 +51,7 @@ class About extends Component {
   render() {
 
     const { loading } = this.state
+    const feeds = instaFeeds.items.slice(0, 18)
 
     return (
       <div className="about-page">
@@ -196,6 +199,40 @@ class About extends Component {
             </div>
           </div>
         </section>
+
+        <div className="container is-fluid instafeeds is-hidden-mobile">
+          <div className="columns is-multiline is-gapless">
+            {
+              feeds.map((item, i) => {
+                return (
+                  <img
+                    key={`desktop-insta-${item.id}`}
+                    className="column is-2"
+                    alt={item.caption.text}
+                    src={item.images.low_resolution.url}
+                  />
+                )
+              })
+            }
+          </div>
+        </div>
+
+        <div className="container is-fluid instafeeds is-hidden-desktop is-hidden-tablet">
+          <div className="columns is-multiline is-gapless is-mobile">
+            {
+              feeds.map((item, i) => {
+                return (
+                  <img
+                    key={`mobile-insta-${item.id}`}
+                    className="column is-2"
+                    alt={item.caption.text}
+                    src={item.images.low_resolution.url}
+                  />
+                )
+              })
+            }
+          </div>
+        </div>
 
         <Footer router={this.context.router} />
 

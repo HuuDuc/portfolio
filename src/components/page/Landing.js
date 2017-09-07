@@ -3,10 +3,8 @@ import PropTypes from 'prop-types'
 import QueryString from 'query-string'
 import classnames from 'classnames'
 import ScrollReveal from 'scrollreveal'
-import FakeImg from 'react-fakeimg'
-import Footer from '@/common/Footer'
+// import Instafeed from 'instafeed.js'
 
-import ScrollIcon from '@/common/ScrollIcon'
 import Loading from '@/Loading'
 
 class Landing extends Component {
@@ -21,6 +19,8 @@ class Landing extends Component {
 
   componentWillMount() {
     document.title = 'PORTFOLIO 投資組合 | Stéphane Nguyen'
+    // const url = 'https://api.instagram.com/v1/users/self/media/recent/?access_token=2980218616.5d6e3ce.77e73c5abfe645d690f9e85b3752ed4c'
+    // const url = 'https://www.instagram.com/yoyodedongxi/media/'
   }
 
   componentDidMount() {
@@ -100,55 +100,7 @@ class Landing extends Component {
             {'love fine design. enjoy working on artistic projects.'}
           </p>
 
-          <div className="hero-foot">
-            <div
-              className="container is-pos-relative"
-              style={{ height: '50px', marginBottom: '40px' }}
-            >
-              <ScrollIcon />
-            </div>
-          </div>
-
         </section>
-
-        <section className="section">
-          <div className="container">
-
-            <h3 className="title is-3 is-uppercase has-text-centered">blog</h3>
-            <h5 className="title is-5 is-uppercase has-text-centered is-normal">博客</h5>
-            <p className="has-text-centered is-paragraph">I will try to keep writing and sharing things with all of you.</p>
-
-            <div className="columns is-multiline list-articles" style={{ marginTop: '50px' }}>
-
-              <div className="column is-4">
-                <a
-                  style={{ display: 'block' }}
-                  onClick={() => this.context.router.push('/article/bonjour')}
-                >
-                  <img
-                    src={require('+/articles/bonjour.jpg')}
-                    alt="bonjour"
-                    style={{ width: '100%' }}
-                  />
-                </a>
-                <h5 className="title is-5 is-uppercase">
-                  bonjour <span>你好</span>
-                </h5>
-                <p className="has-text-right">
-                  <a
-                    className="is-uppercase"
-                    onClick={() => this.context.router.push('/article/bonjour')}
-                  >
-                    read more
-                  </a>
-                </p>
-              </div>
-
-            </div>
-          </div>
-        </section>
-
-        <Footer router={this.context.router}/>
 
         <Loading show={loading} />
 
