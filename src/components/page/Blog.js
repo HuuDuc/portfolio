@@ -80,6 +80,7 @@ class Blog extends Component {
                 <h5 className="title is-5 is-uppercase">
                   bonjour <span>你好</span>
                 </h5>
+                <p className="is-paragraph">Introduction about myself, my hobbies, my future and philosophy.</p>
                 <p className="has-text-right">
                   <a
                     className="is-uppercase"

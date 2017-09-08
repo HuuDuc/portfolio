@@ -4,46 +4,8 @@
       margin-top: 30px;
     }
   }
-  // .paris,
-  // .taipei {
-  //   background-image: url('../assets/taipei.jpg');
-  //   background-position: center;
-  //   background-size: cover;
-  //   position: relative;
-  //   overflow: hidden;
-  //
-  //   .description {
-  //     width: 100%;
-  //     * {
-  //       color: $color-black;
-  //     }
-  //   }
-  // }
-  // .taipei {
-  //   @include mobile {
-  //     background-position: 55% center;
-  //   }
-  //   .sentence {
-  //     left: 200px;
-  //     position: absolute;
-  //     top: 200px;
-  //     color: $color-pink;
-  //   }
-  // }
-  // .paris {
-  //   @include mobile {
-  //     background-position: 20% center;
-  //   }
-  //   background-image: url('../assets/paris.jpg');
-  //   .sentence {
-  //     right: 300px;
-  //     position: absolute;
-  //     top: 200px;
-  //     color: $color-pink;
-  //   }
-  // }
-
   .numbers {
+    position: relative;
     img {
       @include mobile {
         max-width: 150px;
@@ -70,23 +32,30 @@
       }
     }
   }
+
   .whatcanido {
+    position: relative;
+
     img {
       @include mobile {
         max-width: 150px;
       }
-      max-width: 250px;
       margin-bottom: 20px;
+      max-width: 250px;
     }
+
     .list {
       margin-top: 30px;
+
       p {
         margin-top: 20px;
       }
     }
   }
+
   .countries {
     position: relative;
+
     .content {
       height: 100%;
       left: 0;
@@ -156,13 +125,23 @@
             > div {
               @include desktop {
                 opacity: 0;
-                transform: scale(0.9);
+                transform: scale(.9);
                 transition: transform .4s, opacity .4s;
               }
             }
           }
         }
       }
+    }
+  }
+
+  .contact {
+    @include mobile {
+      padding: 50px 0;
+    }
+
+    a {
+      @extend %hover-pink-line;
     }
   }
 }

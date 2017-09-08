@@ -61,6 +61,50 @@ a {
   }
 }
 
+.button {
+  background-color: transparent;
+  border-color: $color-grey-80;
+  border-radius: 0;
+  color: $color-grey-60;
+  position: relative;
+  transition: color .3s;
+
+  &.is-medium {
+    line-height: calc(45px - 13px);
+  }
+  &.is-large {
+    line-height: calc(54px - 16px);
+  }
+
+  &.is-active {
+    border-color: $color-pink;
+  }
+
+  &::before {
+    @extend %before-after;
+    background-color: $color-pink;
+    transition: width .2s;
+    width: 0;
+    z-index: -1;
+  }
+
+  &:active,
+  &:focus {
+    border-color: $color-grey-80;
+  }
+
+  &:hover {
+    @include desktop {
+      border-color: $color-grey-80;
+      color: $color-white;
+
+      &::before {
+        width: 100%;
+      }
+    }
+  }
+}
+
 ul {
   margin-left: 0;
   li {

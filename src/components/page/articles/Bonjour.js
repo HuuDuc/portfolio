@@ -65,20 +65,20 @@ class Bonjour extends Component {
 
         <section className="section content">
           <div className="container">
-            <h5 className="title is-5 is-uppercase">introduction</h5>
+            <h5 className="is-uppercase">introduction</h5>
             <p className="is-paragraph">
               My name is Stéphane Nguyen, I am a french currently living in Taiwan.
               I am 29 years old and work in the web industry for almost 10 years.
               I am going to write as much as I can about my life, my projects.
               The goal is too help you guys all arround the world, in web development, or how to be an expat etc...
             </p>
-            <h5 className="title is-5 is-uppercase">hobbies</h5>
+            <h5 className="is-uppercase">hobbies</h5>
             <p className="is-paragraph">
               As a simple person, I want to keep learning and discovering most
               of the things I can. I am passionate with design
               in any kind of domain (cooking, architecture, web of course...).
             </p>
-            <h5 className="title is-5 is-uppercase">future</h5>
+            <h5 className="is-uppercase">future</h5>
             <p className="is-paragraph">
               I do not know my future but all decisions I have made or I will make affect or will
               affect it. For now I live in Taiwan but the future can change.

@@ -33,10 +33,7 @@ class About extends Component {
       .reveal('.intro h4', { origin: 'left', delay: 800, scale: 1 }, 500)
       .reveal('.intro .columns', { origin: 'right', delay: 800, scale: 1 }, 500)
       .reveal('.paris', { origin: 'left', delay: 500, scale: 1 }, 500)
-      .reveal('.paris .hero-body', { origin: 'right', delay: 500, scale: 1 }, 500)
       .reveal('.taipei', { origin: 'right', delay: 500, scale: 1 }, 500)
-      .reveal('.taipei .hero-body', { origin: 'left', delay: 500, scale: 1 }, 500)
-
 
       .reveal('.hero.whatcanido h3', { origin: 'left', delay: 500, scale: 1 }, 100)
       .reveal('.hero.whatcanido p.has-text-centered', { origin: 'right', delay: 500, scale: 1 }, 100)
@@ -46,6 +43,11 @@ class About extends Component {
       .reveal('.hero.numbers h3', { origin: 'left', delay: 500, scale: 1 }, 100)
       .reveal('.hero.numbers p.has-text-centered', { origin: 'right', delay: 500, scale: 1 }, 100)
       .reveal('.hero.numbers .columns .column', { delay: 500, scale: 1 }, 100)
+
+      .reveal('.instafeeds', { delay: 500, scale: 1 }, 100)
+      .reveal('.instafeeds img', { origin: 'right', delay: 600, scale: 1 }, 150)
+
+      .reveal('.contact p', { origin: 'left', delay: 600, scale: 1 })
   }
 
   render() {
@@ -233,6 +235,19 @@ class About extends Component {
             }
           </div>
         </div>
+
+        <section className="hero is-large contact">
+          <div className="hero-body">
+            <p className="has-text-centered">
+              <a
+                onClick={() => this.context.router.push('/contact')}
+                className="is-uppercase is-size-3 is-size-4-mobile"
+              >
+                contact me
+              </a>
+            </p>
+          </div>
+        </section>
 
         <Footer router={this.context.router} />
 

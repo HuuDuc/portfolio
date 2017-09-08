@@ -46,14 +46,16 @@ class Menu extends Component {
                         about <span className="is-lighter">/ 關於我</span>
                       </a>
                     </li>
-                    <li className="is-uppercase">
-                      <a
-                        onClick={() => router.push('/blog')}
-                        className="is-size-2 is-size-4-mobile"
-                      >
-                        blog <span className="is-lighter">/ 博客</span>
-                      </a>
-                    </li>
+                    {/*
+                      <li className="is-uppercase">
+                        <a
+                          onClick={() => router.push('/blog')}
+                          className="is-size-2 is-size-4-mobile"
+                        >
+                          blog <span className="is-lighter">/ 博客</span>
+                        </a>
+                      </li>
+                    */}
                     <li className="is-uppercase">
                       <a
                         onClick={() => router.push('/contact')}

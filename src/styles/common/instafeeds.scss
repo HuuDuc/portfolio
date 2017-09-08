@@ -11,9 +11,7 @@
   }
 
   .column {
-    @include mobile {
-      height: 16.66667%;
-    }
+    height: 16.66667%;
     opacity: .6;
   }
 }

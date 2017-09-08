@@ -28,10 +28,10 @@ class Wrapper extends Component {
         <Menu show={show_menu} />
         <MenuIcon onClick={this.onToggleMenu}  />
         <Logo show={show_menu} />
-        <div className="developer show is-hidden-mobile">
+        <div className="developer show is-hidden-mobile is-hidden-tablet">
           <p className="is-uppercase is-bold">front-end developer</p>
         </div>
-        <div className="socials show has-text-centered is-hidden-mobile">
+        <div className="socials show has-text-centered is-hidden-mobile is-hidden-tablet">
           <p><a href="https://twitter.com/huuducweb"><Icon name="twitter"/></a></p>
           <p><a href="http://www.linkedin.com/in/stephanehuuducnguyen"><Icon name="linkedin"/></a></p>
           <p><a href="https://github.com/HuuDuc"><Icon name="github"/></a></p>

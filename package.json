@@ -2,6 +2,7 @@
   "name": "stephanenguyen",
   "version": "0.1.0",
   "private": true,
+  "homepage" : "https://huuduc.github.io",
   "dependencies": {
     "autoprefixer": "7.1.1",
     "babel-core": "6.25.0",
