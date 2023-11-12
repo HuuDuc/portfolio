@@ -1,0 +1,173 @@
+:root {
+  --border-radius: 4px;
+  --color-text: #232636;
+  --color-grey: #333;
+  --color-primary: #7026b9;
+  --color-code-bg: #fff3e5;
+  --color-code: #8a6534;
+  --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial,
+    sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+  --font-mono: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
+    "Courier New", monospace;
+  --font-lg: 20px;
+  --font-md: 16px;
+  --font-sm: 14px;
+  --font-sx: 12px;
+  --line-height-loose: 1.75;
+  --line-height-normal: 1.5;
+  --line-height-dense: 1.1;
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 16px;
+  --space-4: 24px;
+  --space-5: 32px;
+  --space-6: 64px;
+  --size-content: 54rem;
+  --size-gutter: var(--space-5);
+  --size-gap: var(--space-6);
+}
+html {
+  -webkit-text-size-adjust: 100%;
+  box-sizing: border-box;
+  font: sans-serif;
+  font-size: var(--font-lg);
+  line-height: var(--line-height-normal);
+  overflow-y: scroll;
+}
+body {
+  background-color: var(--color-code-bg);
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  color: var(--color-text);
+  font-family: sans-serif;
+  font-family: var(--font-sans);
+  font-weight: normal;
+  margin: 0;
+  word-wrap: break-word;
+  &.dark {
+    background-color: var(--color-grey);
+    color: var(--color-code-bg);
+
+    footer {
+      
+      background-color: DARK;
+      background-image:
+      radial-gradient(circle at 100% 150%, var(--color-code-bg) 24%, var(--color-grey) 24%, var(--color-grey) 28%, var(--color-code-bg) 28%, var(--color-code-bg) 36%, var(--color-grey) 36%, var(--color-grey) 40%, transparent 40%, transparent),
+      radial-gradient(circle at 0    150%, var(--color-code-bg) 24%, var(--color-grey) 24%, var(--color-grey) 28%, var(--color-code-bg) 28%, var(--color-code-bg) 36%, var(--color-grey) 36%, var(--color-grey) 40%, transparent 40%, transparent),
+      radial-gradient(circle at 50%  100%, var(--color-grey) 10%, var(--color-code-bg) 10%, var(--color-code-bg) 23%, var(--color-grey) 23%, var(--color-grey) 30%, var(--color-code-bg) 30%, var(--color-code-bg) 43%, var(--color-grey) 43%, var(--color-grey) 50%, var(--color-code-bg) 50%, var(--color-code-bg) 63%, var(--color-grey) 63%, var(--color-grey) 71%, transparent 71%, transparent),
+      radial-gradient(circle at 100% 50%, var(--color-grey) 5%, var(--color-code-bg) 5%, var(--color-code-bg) 15%, var(--color-grey) 15%, var(--color-grey) 20%, var(--color-code-bg) 20%, var(--color-code-bg) 29%, var(--color-grey) 29%, var(--color-grey) 34%, var(--color-code-bg) 34%, var(--color-code-bg) 44%, var(--color-grey) 44%, var(--color-grey) 49%, transparent 49%, transparent),
+      radial-gradient(circle at 0    50%, var(--color-grey) 5%, var(--color-code-bg) 5%, var(--color-code-bg) 15%, var(--color-grey) 15%, var(--color-grey) 20%, var(--color-code-bg) 20%, var(--color-code-bg) 29%, var(--color-grey) 29%, var(--color-grey) 34%, var(--color-code-bg) 34%, var(--color-code-bg) 44%, var(--color-grey) 44%, var(--color-grey) 49%, transparent 49%, transparent);
+      p {
+        text-shadow: -2px 0 var(--color-grey), 0 2px var(--color-grey), 2px 0 var(--color-grey), 0 -2px var(--color-grey);
+        font-family: sans; color: var(--color-code-bg);
+      }
+    }
+
+  }
+}
+a {
+  background-color: transparent;
+  color: inherit;
+  font-weight: 500;
+  text-decoration: underline;
+  text-decoration-thickness: 1.5px;
+  text-underline-offset: 2px;
+
+  &.external-link {
+    position: relative;
+    padding-right: 12px;
+    span {
+      position: absolute;
+      right: 0;
+      top: -4px;
+      font-size: 12px
+    }
+    &:hover {
+      span {
+        transition: transform 0.2s;
+        transform: translateX(2px) translateY(-2px);
+      }
+    }
+  }
+}
+a:active,
+a:hover {
+  outline-width: 0;
+  text-decoration: none;
+}
+* {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+*:before {
+  box-sizing: inherit;
+}
+*:after {
+  box-sizing: inherit;
+}
+footer {
+  border: 1px solid;
+  min-height: 25vh;
+  margin-top: 50px;
+  
+  background-attachment: fixed;
+  background-color: var(--color-text);
+  background-image:
+  radial-gradient(circle at 100% 150%, var(--color-text) 24%, var(--color-code-bg) 24%, var(--color-code-bg) 28%, var(--color-text) 28%, var(--color-text) 36%, var(--color-code-bg) 36%, var(--color-code-bg) 40%, transparent 40%, transparent),
+  radial-gradient(circle at 0    150%, var(--color-text) 24%, var(--color-code-bg) 24%, var(--color-code-bg) 28%, var(--color-text) 28%, var(--color-text) 36%, var(--color-code-bg) 36%, var(--color-code-bg) 40%, transparent 40%, transparent),
+  radial-gradient(circle at 50%  100%, var(--color-code-bg) 10%, var(--color-text) 10%, var(--color-text) 23%, var(--color-code-bg) 23%, var(--color-code-bg) 30%, var(--color-text) 30%, var(--color-text) 43%, var(--color-code-bg) 43%, var(--color-code-bg) 50%, var(--color-text) 50%, var(--color-text) 63%, var(--color-code-bg) 63%, var(--color-code-bg) 71%, transparent 71%, transparent),
+  radial-gradient(circle at 100% 50%, var(--color-code-bg) 5%, var(--color-text) 5%, var(--color-text) 15%, var(--color-code-bg) 15%, var(--color-code-bg) 20%, var(--color-text) 20%, var(--color-text) 29%, var(--color-code-bg) 29%, var(--color-code-bg) 34%, var(--color-text) 34%, var(--color-text) 44%, var(--color-code-bg) 44%, var(--color-code-bg) 49%, transparent 49%, transparent),
+  radial-gradient(circle at 0    50%, var(--color-code-bg) 5%, var(--color-text) 5%, var(--color-text) 15%, var(--color-code-bg) 15%, var(--color-code-bg) 20%, var(--color-text) 20%, var(--color-text) 29%, var(--color-code-bg) 29%, var(--color-code-bg) 34%, var(--color-text) 34%, var(--color-text) 44%, var(--color-code-bg) 44%, var(--color-code-bg) 49%, transparent 49%, transparent);
+  background-size: 200px 100px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  p {
+    text-shadow: -2px 0 var(--color-text), 0 2px var(--color-text), 2px 0 var(--color-text), 0 -2px var(--color-text);
+    font-family: sans; color: var(--color-code-bg);
+    font-weight: bold !important;
+    text-transform: uppercase;
+    line-height: 1;
+    text-align: center !important;
+  }
+}
+.pb-10 {
+  padding-bottom: 10px
+}
+.page-404 {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+
+  .content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+
+  svg {
+    font-size: 10rem;
+    @media (max-width:900px) {
+      font-size: 6rem;
+    }
+  }
+}
+
+.icon-theme {
+  cursor: pointer;
+  height: 25px;
+  display: block;
+  margin-top: 4px;
+}
+
+.no-button {
+  border: none;
+  background: inherit;
+  color: inherit;
+}

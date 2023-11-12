@@ -1,0 +1,28 @@
+{
+  "intro": "Développeur front-end français-canadien, spécialisé dans les expériences Web numériques raffinées en mettant l'accent sur un contenu minimal, réactif et interactif.",
+  "about": "à propos de moi",
+  "about.background": "parcours",
+  "about.languages": "langues",
+  "about.motivator": "Aborder des problèmes complexes. Écouter les retours de différentes personnes afin atteindre un résultat final proche de la perfection. Entendre « WOW ». Construire un consensus et une dynamique vers une vision partagée. Écrire du code.",
+  "about.journey": "Plus de quinze années d'expérience qui ont commencé de Paris, à Taipei et maintenant Vancouver. J'ai commencé mon parcours en tant que développeur PHP full stack, j'ai décidé de me concentrer sur le développement front-end, car je suis plus attiré par les belles interfaces, au pixel près et par l'interface utilisateur implémentée de manière intuitive.",
+  "about.language": "Français, Anglais, Vietnamien, un peu Chinois",
+  "experiences": "expériences",
+  "skills": "compétences",
+
+  "current": "actuel",
+  "current.where": "où",
+
+  "publications_and_mores": "publications",
+  "publications.soon": "bientôt",
+  "publications.packages.react-fakeimg.description": "Besoin d'une fausse image pour votre maquette ? React-fakeimg créera pour vous une image via l'API Canvas. Aucun hôte n'est nécessaire, ce qui signifie aucune requête HTTP(S).",
+
+  "contact": "contact",
+  "contact.role": "Ingénieur de direction front-end",
+  "contact.role.semtech": "une entreprise Semtech",
+  "contact.role.timezone": "Heure standard du Pacifique",
+  "contact.send.message": "Envoyez un message",
+  "contact.send.message.next": "sur les nouvelles opportunités ou collaborations",
+
+  "footer.thisis": "ceci est un bas de page",
+  "404.lost": "Ah vous vous êtes perdu !"
+}

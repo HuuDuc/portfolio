@@ -1,0 +1,28 @@
+{
+  "intro": "French-Canadian front-end developer, specialized in refined digital web experiences with a focus on minimal, responsive, and interactive content.",
+  "about": "about",
+  "about.background": "background",
+  "about.languages": "languages",
+  "about.motivator": "Tackling complex problems. Listening feedbacks from various persons to reach the near perfect end result. Hearing \"WOW\". Building consensus and momentum towards a shared vision. Writing code.",
+  "about.journey": "More than fifteen years of experience which started from Paris, to Taipei and now Vancouver. Began my journey as a PHP full stack developer, I decided to focus on the front-end development, since I am more attracted about cutting-edge, pixel-perfect, beautiful interfaces and intuitively implemented UX.",
+  "about.language": "French, English, Vietnamese, a little bit Chinese",
+  "experiences": "experiences",
+  "skills": "skills",
+
+  "current": "current",
+  "current.where": "where",
+
+  "publications_and_mores": "publications",
+  "publications.soon": "soon",
+  "publications.packages.react-fakeimg.description": "Need fake image for your mockup ? react-fakeimg will create for you an image via canvas API. There is no needed for host meaning no HTTP(S) requests.",
+
+  "contact": "contact",
+  "contact.role": "Staff engineer front-end",
+  "contact.role.semtech": "a Semtech company",
+  "contact.role.timezone": "Pacific Standard Time",
+  "contact.send.message": "Send a message",
+  "contact.send.message.next": "about new opportunities or collaborations",
+
+  "footer.thisis": "this is a footer",
+  "404.lost": "Ah you got lost !"
+}
