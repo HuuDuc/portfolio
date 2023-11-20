@@ -5,17 +5,18 @@
  * See: https://www.gatsbyjs.com/docs/how-to/querying-data/use-static-query/
  */
 
-import React, { useState, useEffect } from "react"
-import { useStaticQuery, graphql } from "gatsby"
-import { ThemeProvider } from "@mui/material/styles"
-import { darkTheme, lightTheme } from "./muiTheme"
-import { Container, Typography } from "@mui/material"
-import { useTranslation } from "gatsby-plugin-react-i18next"
+import React, { useState, useEffect } from "react";
+import { useStaticQuery, graphql } from "gatsby";
+import { ThemeProvider } from "@mui/material/styles";
+import { darkTheme, lightTheme } from "./muiTheme";
+import { Container, Typography } from "@mui/material";
+import { useTranslation } from "gatsby-plugin-react-i18next";
 
-import Header from "./header"
-import "./layout.scss"
+import Header from "./header";
+import "./layout.scss";
+import Marquee from "react-fast-marquee";
 
-const isBrowser = typeof window !== "undefined"
+const isBrowser = typeof window !== "undefined";
 
 const Layout = ({ breadcrumbs = [], children }) => {
   const data = useStaticQuery(graphql`
@@ -26,15 +27,15 @@ const Layout = ({ breadcrumbs = [], children }) => {
         }
       }
     }
-  `)
+  `);
 
-  const { t } = useTranslation()
+  const { t } = useTranslation();
 
-  let fromSessionStorage = null
+  let fromSessionStorage = null;
   if (isBrowser) {
-    fromSessionStorage = window.sessionStorage.getItem("theme")
+    fromSessionStorage = window.sessionStorage.getItem("theme");
     if (fromSessionStorage === "dark") {
-      document.body.classList.add("dark")
+      document.body.classList.add("dark");
     }
   }
 
@@ -42,24 +43,36 @@ const Layout = ({ breadcrumbs = [], children }) => {
     ["light", "dark"].includes(fromSessionStorage)
       ? fromSessionStorage
       : "light"
-  )
+  );
 
-  useEffect(() => {}, [])
+  useEffect(() => {}, []);
 
   const toggleTheme = () => {
-    const nextTheme = theme === "light" ? "dark" : "light"
+    const nextTheme = theme === "light" ? "dark" : "light";
     if (nextTheme === "light") {
-      window.sessionStorage.removeItem("theme")
-      document.body.classList.remove("dark")
+      window.sessionStorage.removeItem("theme");
+      document.body.classList.remove("dark");
     } else {
-      window.sessionStorage.setItem("theme", "dark")
-      document.body.classList.add("dark")
+      window.sessionStorage.setItem("theme", "dark");
+      document.body.classList.add("dark");
     }
-    setTheme(nextTheme)
-  }
+    setTheme(nextTheme);
+  };
 
   return (
     <ThemeProvider theme={theme === "light" ? lightTheme : darkTheme}>
+      <Marquee
+        style={{
+          borderTop: "1px solid var(--color-text)",
+          borderBottom: "1px solid var(--color-text)",
+          backgroundColor: "rgb(180, 227, 61)",
+          padding: "5px 0px",
+          color: "var(--color-grey)"
+        }}
+        autoFill
+      >
+        {t("first.message")}&nbsp;•&nbsp;
+      </Marquee>
       <Container maxWidth={false}>
         <Header
           breadcrumbs={breadcrumbs}
@@ -75,7 +88,7 @@ const Layout = ({ breadcrumbs = [], children }) => {
         </footer>
       </Container>
     </ThemeProvider>
-  )
-}
+  );
+};
 
-export default Layout
+export default Layout;

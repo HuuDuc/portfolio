@@ -1,4 +1,4 @@
-import React from "react"
+import React from "react";
 
 export const ExternalLink = ({ children, ...rest }) => {
   return (
@@ -6,7 +6,7 @@ export const ExternalLink = ({ children, ...rest }) => {
       {children}
       <span>&#8599;</span>
     </a>
-  )
-}
+  );
+};
 
-export default ExternalLink
+export default ExternalLink;

@@ -1,12 +1,12 @@
-import React from "react"
-import { graphql } from "gatsby"
-import { useTranslation } from "gatsby-plugin-react-i18next"
-import { Divider, Grid, Typography } from "@mui/material"
-import ExternalLink from "../components/ExternalLink"
+import React from "react";
+import { graphql } from "gatsby";
+import { useTranslation } from "gatsby-plugin-react-i18next";
+import { Divider, Grid, Typography } from "@mui/material";
+import ExternalLink from "../components/ExternalLink";
 
-import Section from "../components/section"
-import Layout from "../components/layout"
-import Seo from "../components/seo"
+import Section from "../components/section";
+import Layout from "../components/layout";
+import Seo from "../components/seo";
 
 const experiences = {
   canada: ["Semtech", "Sierra wireless"],
@@ -20,10 +20,10 @@ const experiences = {
     "Opteemo",
     "Espacemax",
   ],
-}
+};
 
 const IndexPage = () => {
-  const { t } = useTranslation()
+  const { t } = useTranslation();
 
   const node_packages = [
     {
@@ -31,7 +31,7 @@ const IndexPage = () => {
       link: "https://www.npmjs.com/package/react-fakeimg",
       description: t("publications.packages.react-fakeimg.description"),
     },
-  ]
+  ];
 
   return (
     <Layout>
@@ -87,23 +87,9 @@ const IndexPage = () => {
                 <Typography variant="h3">front-end</Typography>
               </Grid>
               <Grid item md={9}>
-                <Grid container spacing={3}>
-                  <Grid item xs={12} md={4}>
-                    javascript (ES6)
-                    <br />
-                    React.js
-                  </Grid>
-                  <Grid item xs={12} md={4}>
-                    HTML3,
-                    <br />
-                    SEO
-                  </Grid>
-                  <Grid item xs={12} md={4}>
-                    CSS3, SCSS,
-                    <br />
-                    Responsive Web Design
-                  </Grid>
-                </Grid>
+                <Typography>
+                  HTML, CSS, javascript (ES6), Typescript, React, Testing Library, Jest, Redux
+                </Typography>
               </Grid>
               <Grid item xs={12}>
                 <Divider className="middle" />
@@ -112,20 +98,9 @@ const IndexPage = () => {
                 <Typography variant="h3">back-end</Typography>
               </Grid>
               <Grid item md={9}>
-                <Grid container spacing={3}>
-                  <Grid item xs={12} md={4}>
-                    PHP, Node.js
-                  </Grid>
-                  <Grid item xs={12} md={4}>
-                    Laravel, Symfony,
-                    <br />
-                    Wordpress, Express, Adonis
-                  </Grid>
-                  <Grid item xs={12} md={4}>
-                    MySQL, SQL Server
-                    <br /> No SQL
-                  </Grid>
-                </Grid>
+                <Typography>
+                  Apache, PHP, Node.js, Laravel, Symfony, CodeIgniter, Wordpress, Express, Adonis, MySQL, SQL Server, No SQL
+                </Typography>
               </Grid>
             </Grid>
           </div>
@@ -146,9 +121,11 @@ const IndexPage = () => {
                 </Grid>
                 <Grid item xs={8} md={9}>
                   <Grid container spacing={3}>
-                    {experiences[country].map(company => (
+                    {experiences[country].map((company) => (
                       <Grid key={`company-${company}`} item xs={6} md={4}>
-                        {company}
+                        <Typography>
+                          {company}
+                        </Typography>
                       </Grid>
                     ))}
                   </Grid>
@@ -168,7 +145,7 @@ const IndexPage = () => {
                 </Typography>
               </Grid>
               <Grid item>
-                <div>{t("publications.soon")}</div>
+                <Typography>{t("publications.soon")}</Typography>
               </Grid>
             </Grid>
           </div>
@@ -187,8 +164,8 @@ const IndexPage = () => {
                       <ExternalLink href={node.link}>
                         <strong>{node.label}</strong>
                       </ExternalLink>
+                      <dd>{node.description}</dd>
                     </Typography>
-                    <dd>{node.description}</dd>
                   </div>
                 ))}
               </Grid>
@@ -204,11 +181,13 @@ const IndexPage = () => {
               <Typography variant="h3">role</Typography>
             </Grid>
             <Grid item md lg={3} xl={6}>
-              {t("contact.role")} @{" "}
-              <ExternalLink href="https://www.sierrawireless.com/">
-                Sierra Wireless
-              </ExternalLink>
-              , {t("contact.role.semtech")}
+              <Typography>
+                {t("contact.role")} @{" "}
+                <ExternalLink href="https://www.sierrawireless.com/">
+                  Sierra Wireless
+                </ExternalLink>
+                , {t("contact.role.semtech")}
+              </Typography>
             </Grid>
             <Grid item xs={12}>
               <Divider className="middle" />
@@ -217,7 +196,9 @@ const IndexPage = () => {
               <Typography variant="h3">{t("current.where")}</Typography>
             </Grid>
             <Grid item md lg={3} xl={6}>
+              <Typography>
               {t("contact.role.timezone")} (UTC-08)
+              </Typography>
             </Grid>
             <Grid item xs={12}>
               <Divider className="middle" />
@@ -226,13 +207,21 @@ const IndexPage = () => {
               <Typography variant="h3">{t("elsewhere")}</Typography>
             </Grid>
             <Grid item md lg={3} xl={6}>
-              <ExternalLink href="https://github.com/huuduc">
-                Github
-              </ExternalLink>
-              {`, `}
-              <ExternalLink href="https://www.linkedin.com/in/stephanengn/">
-                Linkedin
-              </ExternalLink>
+              <Typography>
+                <ExternalLink href="https://github.com/huuduc">
+                  Github
+                </ExternalLink>
+              </Typography>
+              <Typography>
+                <ExternalLink href="https://www.linkedin.com/in/stephanengn/">
+                  Linkedin
+                </ExternalLink>
+              </Typography>
+              <Typography>
+                <ExternalLink href="https://leetcode.com/yoyodedongxi/">
+                  Leetcode
+                </ExternalLink>
+              </Typography>
             </Grid>
             <Grid item xs={12}>
               <Divider className="middle" />
@@ -250,17 +239,17 @@ const IndexPage = () => {
         </Grid>
       </Section>
     </Layout>
-  )
-}
+  );
+};
 
 /**
  * Head export to define metadata for the page
  *
  * See: https://www.gatsbyjs.com/docs/reference/built-in-components/gatsby-head/
  */
-export const Head = () => <Seo title="Home" />
+export const Head = () => <Seo title="Home" />;
 
-export default IndexPage
+export default IndexPage;
 
 export const query = graphql`
   query ($language: String!) {
@@ -274,4 +263,4 @@ export const query = graphql`
       }
     }
   }
-`
+`;

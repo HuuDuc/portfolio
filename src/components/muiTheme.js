@@ -1,6 +1,6 @@
-import { createTheme } from "@mui/material/styles"
+import { createTheme } from "@mui/material/styles";
 
-const { breakpoints } = createTheme()
+const { breakpoints } = createTheme();
 
 const containerStyle = {
   MuiContainer: {
@@ -19,7 +19,7 @@ const containerStyle = {
       },
     },
   },
-}
+};
 
 // const inputStyle = theme => ({
 //   MuiOutlinedInput: {
@@ -33,7 +33,7 @@ const containerStyle = {
 //   },
 // })
 
-const dividerStyle = theme => ({
+const dividerStyle = (theme) => ({
   MuiDivider: {
     styleOverrides: {
       root: {
@@ -64,9 +64,9 @@ const dividerStyle = theme => ({
       },
     },
   },
-})
+});
 
-const typoStyle = theme => ({
+const typoStyle = (theme) => ({
   MuiTypography: {
     styleOverrides: {
       root: {
@@ -113,7 +113,7 @@ const typoStyle = theme => ({
       h6: { fontWeight: "bold" },
     },
   },
-})
+});
 
 export const lightTheme = createTheme({
   components: {
@@ -121,7 +121,7 @@ export const lightTheme = createTheme({
     ...dividerStyle("light"),
     ...typoStyle("light"),
   },
-})
+});
 
 export const darkTheme = createTheme({
   components: {
@@ -129,4 +129,4 @@ export const darkTheme = createTheme({
     ...dividerStyle("dark"),
     ...typoStyle("dark"),
   },
-})
+});

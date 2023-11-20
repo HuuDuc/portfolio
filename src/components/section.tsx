@@ -1,12 +1,12 @@
-import React from "react"
-import { Divider, Grid, Typography } from "@mui/material"
+import React from "react";
+import { Divider, Grid, Typography } from "@mui/material";
 
 const Section = ({
   children,
   text,
 }: {
-  children: React.ReactNode
-  text: string
+  children: React.ReactNode;
+  text: string;
 }): JSX.Element => {
   return (
     <section>
@@ -20,7 +20,7 @@ const Section = ({
         {children}
       </Grid>
     </section>
-  )
-}
+  );
+};
 
-export default Section
+export default Section;

@@ -4,7 +4,7 @@
  * See: https://www.gatsbyjs.com/docs/reference/config-files/gatsby-config/
  */
 
-const siteUrl = `https://huuduc.github.io/`
+const siteUrl = `https://huuduc.github.io/`;
 
 /**
  * @type {import('gatsby').GatsbyConfig}
@@ -79,4 +79,4 @@ module.exports = {
       },
     },
   ],
-}
+};
