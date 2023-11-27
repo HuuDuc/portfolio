@@ -34,6 +34,7 @@ html {
   line-height: var(--line-height-normal);
   overflow-y: scroll;
 }
+
 body {
   background-color: var(--color-code-bg);
   -moz-osx-font-smoothing: grayscale;
@@ -49,20 +50,14 @@ body {
     color: var(--color-code-bg);
 
     footer {
-      
-      background-color: DARK;
-      background-image:
-      radial-gradient(circle at 100% 150%, var(--color-code-bg) 24%, var(--color-grey) 24%, var(--color-grey) 28%, var(--color-code-bg) 28%, var(--color-code-bg) 36%, var(--color-grey) 36%, var(--color-grey) 40%, transparent 40%, transparent),
-      radial-gradient(circle at 0    150%, var(--color-code-bg) 24%, var(--color-grey) 24%, var(--color-grey) 28%, var(--color-code-bg) 28%, var(--color-code-bg) 36%, var(--color-grey) 36%, var(--color-grey) 40%, transparent 40%, transparent),
-      radial-gradient(circle at 50%  100%, var(--color-grey) 10%, var(--color-code-bg) 10%, var(--color-code-bg) 23%, var(--color-grey) 23%, var(--color-grey) 30%, var(--color-code-bg) 30%, var(--color-code-bg) 43%, var(--color-grey) 43%, var(--color-grey) 50%, var(--color-code-bg) 50%, var(--color-code-bg) 63%, var(--color-grey) 63%, var(--color-grey) 71%, transparent 71%, transparent),
-      radial-gradient(circle at 100% 50%, var(--color-grey) 5%, var(--color-code-bg) 5%, var(--color-code-bg) 15%, var(--color-grey) 15%, var(--color-grey) 20%, var(--color-code-bg) 20%, var(--color-code-bg) 29%, var(--color-grey) 29%, var(--color-grey) 34%, var(--color-code-bg) 34%, var(--color-code-bg) 44%, var(--color-grey) 44%, var(--color-grey) 49%, transparent 49%, transparent),
-      radial-gradient(circle at 0    50%, var(--color-grey) 5%, var(--color-code-bg) 5%, var(--color-code-bg) 15%, var(--color-grey) 15%, var(--color-grey) 20%, var(--color-code-bg) 20%, var(--color-code-bg) 29%, var(--color-grey) 29%, var(--color-grey) 34%, var(--color-code-bg) 34%, var(--color-code-bg) 44%, var(--color-grey) 44%, var(--color-grey) 49%, transparent 49%, transparent);
-      p {
-        text-shadow: -2px 0 var(--color-grey), 0 2px var(--color-grey), 2px 0 var(--color-grey), 0 -2px var(--color-grey);
-        font-family: sans; color: var(--color-code-bg);
+      &:before {
+        background-color: var(--color-code-bg);
+      }
+      &:after {
+        border-bottom: 3px solid var(--color-code-bg);
+        border-top: 2px solid var(--color-code-bg);
       }
     }
-
   }
 }
 a {
@@ -106,34 +101,7 @@ a:hover {
 *:after {
   box-sizing: inherit;
 }
-footer {
-  border: 1px solid;
-  min-height: 25vh;
-  margin-top: 50px;
-  
-  background-attachment: fixed;
-  background-color: var(--color-text);
-  background-image:
-  radial-gradient(circle at 100% 150%, var(--color-text) 24%, var(--color-code-bg) 24%, var(--color-code-bg) 28%, var(--color-text) 28%, var(--color-text) 36%, var(--color-code-bg) 36%, var(--color-code-bg) 40%, transparent 40%, transparent),
-  radial-gradient(circle at 0    150%, var(--color-text) 24%, var(--color-code-bg) 24%, var(--color-code-bg) 28%, var(--color-text) 28%, var(--color-text) 36%, var(--color-code-bg) 36%, var(--color-code-bg) 40%, transparent 40%, transparent),
-  radial-gradient(circle at 50%  100%, var(--color-code-bg) 10%, var(--color-text) 10%, var(--color-text) 23%, var(--color-code-bg) 23%, var(--color-code-bg) 30%, var(--color-text) 30%, var(--color-text) 43%, var(--color-code-bg) 43%, var(--color-code-bg) 50%, var(--color-text) 50%, var(--color-text) 63%, var(--color-code-bg) 63%, var(--color-code-bg) 71%, transparent 71%, transparent),
-  radial-gradient(circle at 100% 50%, var(--color-code-bg) 5%, var(--color-text) 5%, var(--color-text) 15%, var(--color-code-bg) 15%, var(--color-code-bg) 20%, var(--color-text) 20%, var(--color-text) 29%, var(--color-code-bg) 29%, var(--color-code-bg) 34%, var(--color-text) 34%, var(--color-text) 44%, var(--color-code-bg) 44%, var(--color-code-bg) 49%, transparent 49%, transparent),
-  radial-gradient(circle at 0    50%, var(--color-code-bg) 5%, var(--color-text) 5%, var(--color-text) 15%, var(--color-code-bg) 15%, var(--color-code-bg) 20%, var(--color-text) 20%, var(--color-text) 29%, var(--color-code-bg) 29%, var(--color-code-bg) 34%, var(--color-text) 34%, var(--color-text) 44%, var(--color-code-bg) 44%, var(--color-code-bg) 49%, transparent 49%, transparent);
-  background-size: 200px 100px;
 
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  p {
-    text-shadow: -2px 0 var(--color-text), 0 2px var(--color-text), 2px 0 var(--color-text), 0 -2px var(--color-text);
-    font-family: sans; color: var(--color-code-bg);
-    font-weight: bold !important;
-    text-transform: uppercase;
-    line-height: 1;
-    text-align: center !important;
-  }
-}
 .pb-10 {
   padding-bottom: 10px
 }
@@ -170,4 +138,157 @@ footer {
   border: none;
   background: inherit;
   color: inherit;
+}
+
+footer {
+  // border: 1px solid;
+  min-height: 25vh;
+  margin-top: 50px;
+
+  position: relative;
+  overflow: hidden;
+
+  &:before {
+    content: '';
+    position: absolute;
+    height: 1px;
+    width: 100%;
+    background-color: var(--color-text);
+    bottom: 50%;
+    left: 0;
+    opacity: 0.3;
+  }
+  &:after {
+    content: '';
+    position: absolute;
+    height: 20px;
+    width: 100%;
+    border-bottom: 3px solid var(--color-text);
+    border-top: 2px solid var(--color-text);
+    // background-color: var(--color-text);
+    bottom: 15%;
+    left: 0;
+  }
+  
+  .sun {
+    animation: rotate infinite 40s normal;
+    font-size: 3em;
+    position: absolute;
+    left: 48.55%;
+    top: 5px;
+  }
+
+  .vehicule {
+    animation: vehicule-up-down infinite 1s normal;
+  }
+  .truck {
+    animation: vehicule-up-down-2 infinite 1s normal;
+    animation-delay: 1s;
+  }
+
+  .helicopter {
+    margin-top: 50px;
+    transform: scaleX(-1) rotate(15deg);
+    animation: helicopter-up-down infinite 1s normal;
+  }
+
+  .road {
+    position: absolute;
+    bottom: 13.5%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    z-index: 10;
+  }
+
+  .road-dashed {
+    position: absolute;
+    bottom: 13.5%;
+  }
+
+  .town {
+    position: absolute;
+    bottom: 25%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+  }
+
+  .closer1 {
+    opacity: 1;
+  }
+
+  .closer2 {
+    opacity: 0.6;
+  }
+
+  .closer3 {
+    opacity: 0.3;
+  }
+
+  .clouds {
+    position: absolute;
+    bottom: 70%;
+    height: 50px;
+    width: 100%;
+    & > div {
+      position: absolute;
+    }
+  }
+
+  .moutains {
+    position: absolute;
+    bottom: 35%;
+    width: 100%;
+    & > div {
+      position: absolute;
+    }
+    height: 50px;
+  }
+
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes vehicule-up-down {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-1px);
+  }
+}
+
+@keyframes vehicule-up-down-2 {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(1px);
+  }
+  100% {
+    transform: translateY(-1px);
+  }
+}
+
+@keyframes helicopter-up-down {
+  0% {
+    transform: scaleX(-1) rotate(15deg) translateY(0);
+  }
+  100% {
+    transform: scaleX(-1) rotate(15deg) translateY(-1px);
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .is-hidden-mobile {
+    display: none;
+  }
 }

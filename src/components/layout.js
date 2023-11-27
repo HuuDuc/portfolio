@@ -13,6 +13,7 @@ import { Container, Typography } from "@mui/material";
 import { useTranslation } from "gatsby-plugin-react-i18next";
 
 import Header from "./header";
+import Footer from "./footer";
 import "./layout.scss";
 import Marquee from "react-fast-marquee";
 
@@ -67,7 +68,7 @@ const Layout = ({ breadcrumbs = [], children }) => {
           borderBottom: "1px solid var(--color-text)",
           backgroundColor: "rgb(180, 227, 61)",
           padding: "5px 0px",
-          color: "var(--color-grey)"
+          color: "var(--color-grey)",
         }}
         autoFill
       >
@@ -81,12 +82,8 @@ const Layout = ({ breadcrumbs = [], children }) => {
           toggleTheme={toggleTheme}
         />
         <main>{children}</main>
-        <footer>
-          <Typography className="footer-description">
-            {t("footer.thisis")}
-          </Typography>
-        </footer>
       </Container>
+      <Footer />
     </ThemeProvider>
   );
 };

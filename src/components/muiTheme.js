@@ -115,11 +115,22 @@ const typoStyle = (theme) => ({
   },
 });
 
+const svgStyle = (theme) => ({
+  MuiSvgIcon: {
+    styleOverrides: {
+      root: {
+        
+      }
+    },
+  },
+});
+
 export const lightTheme = createTheme({
   components: {
     ...containerStyle,
     ...dividerStyle("light"),
     ...typoStyle("light"),
+    ...svgStyle("light"),
   },
 });
 
@@ -128,5 +139,6 @@ export const darkTheme = createTheme({
     ...containerStyle,
     ...dividerStyle("dark"),
     ...typoStyle("dark"),
+    ...svgStyle("dark"),
   },
 });

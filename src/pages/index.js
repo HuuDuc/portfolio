@@ -88,7 +88,8 @@ const IndexPage = () => {
               </Grid>
               <Grid item md={9}>
                 <Typography>
-                  HTML, CSS, javascript (ES6), Typescript, React, Testing Library, Jest, Redux
+                  HTML, CSS, javascript (ES6), Typescript, React, Testing
+                  Library, Jest, Redux
                 </Typography>
               </Grid>
               <Grid item xs={12}>
@@ -99,7 +100,8 @@ const IndexPage = () => {
               </Grid>
               <Grid item md={9}>
                 <Typography>
-                  Apache, PHP, Node.js, Laravel, Symfony, CodeIgniter, Wordpress, Express, Adonis, MySQL, SQL Server, No SQL
+                  Apache, PHP, Node.js, Laravel, Symfony, CodeIgniter,
+                  Wordpress, Express, Adonis, MySQL, SQL Server, No SQL
                 </Typography>
               </Grid>
             </Grid>
@@ -123,9 +125,7 @@ const IndexPage = () => {
                   <Grid container spacing={3}>
                     {experiences[country].map((company) => (
                       <Grid key={`company-${company}`} item xs={6} md={4}>
-                        <Typography>
-                          {company}
-                        </Typography>
+                        <Typography>{company}</Typography>
                       </Grid>
                     ))}
                   </Grid>
@@ -196,9 +196,7 @@ const IndexPage = () => {
               <Typography variant="h3">{t("current.where")}</Typography>
             </Grid>
             <Grid item md lg={3} xl={6}>
-              <Typography>
-              {t("contact.role.timezone")} (UTC-08)
-              </Typography>
+              <Typography>{t("contact.role.timezone")} (UTC-08)</Typography>
             </Grid>
             <Grid item xs={12}>
               <Divider className="middle" />
